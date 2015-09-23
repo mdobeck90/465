@@ -1,0 +1,6 @@
+test3.txt
+Max Dobeck
+This is a test file containing nonsense words like giraffe, bannana, monkey, dr.doolittle, and elf fart.
+This is the end of the file
+
+file.
