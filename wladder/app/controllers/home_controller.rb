@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
 load "#{Rails.root}/lib/ladder.rb"
+load "#{Rails.root}/lib/words4.rb"
+load "#{Rails.root}/lib/words5.rb"
  def index
-  @start_word = ["#{Rails.root}/lib/words4.rb", "#{Rails.root}/lib/words5.rb"]
-  @start_word.sample
+  @start_word = dictionary.sample 
+  @end_word = dictionary.sample 
  end
 
  def results
@@ -12,5 +14,7 @@ load "#{Rails.root}/lib/ladder.rb"
   @step4 = params[:step4]
   @step5 = params[:step5]
 
+  @start_word = params[:start_word]
+  @end_word =  params[:end_word]
  end
 end

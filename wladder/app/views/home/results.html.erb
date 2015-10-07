@@ -1,9 +1,10 @@
 <%link_to "Play Again?",root_path%>
 
-<p>Your submission:</p>
-<br>
-<p><%="#{@step1}"%></p>
-<p><%="#{@step2}"%></p>
-<p><%="#{@step3}"%></p>
-<p><%="#{@step4}"%></p>
-<p><%="#{@step5}"%></p>
+<h3>Your Guesses:</h3>
+<p><%="Start: #{@start_word}"%></p>
+<p><%="Step 1: "%> <i><%="#{@step1}"%></i></p>
+<p><%="Step 2: "%> <i><%="#{@step2}"%></i></p>
+<p><%="Step 3: "%> <i><%="#{@step3}"%></i></p>
+<p><%="Step 4: "%> <i><%="#{@step4}"%></i></p>
+<p><%="Step 5: "%> <i><%="#{@step5}"%></i></p>
+<p><%="End: #{@end_word}"%></p>
