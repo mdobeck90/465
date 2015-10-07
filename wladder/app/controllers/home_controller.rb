@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
+load "#{Rails.root}/lib/ladder.rb"
  def index
+  @start_word = ["#{Rails.root}/lib/words4.rb", "#{Rails.root}/lib/words5.rb"]
+  @start_word.sample
  end
 
  def results
