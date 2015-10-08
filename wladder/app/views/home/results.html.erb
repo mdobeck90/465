@@ -2,11 +2,21 @@
 
 <h3>Your Guesses:</h3>
 <p><%="Start: #{@start_word}"%></p>
-<p><%="Step 1: "%> <i><%="#{@step1}"%></i></p>
-<p><%="Step 2: "%> <i><%="#{@step2}"%></i></p>
-<p><%="Step 3: "%> <i><%="#{@step3}"%></i></p>
-<p><%="Step 4: "%> <i><%="#{@step4}"%></i></p>
-<p><%="Step 5: "%> <i><%="#{@step5}"%></i></p>
+<%if @step1 != ""%>
+ <p><%="Step 1: "%> <i><%="#{@step1}"%></i></p>
+<%end%>
+<%if @step2 != ""%>
+ <p><%="Step 2: "%> <i><%="#{@step2}"%></i></p>
+<%end%>
+<%if @step3 != ""%>
+ <p><%="Step 3: "%> <i><%="#{@step3}"%></i></p>
+<%end%>
+<%if @step4 != ""%>
+ <p><%="Step 4: "%> <i><%="#{@step4}"%></i></p>
+<%end%>
+<%if @step5 != ""%>
+ <p><%="Step 5: "%> <i><%="#{@step5}"%></i></p>
+<%end%>
 <p><%="End: #{@end_word}"%></p>
 
 <%if @win_state == false%>
