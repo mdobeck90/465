@@ -1,4 +1,4 @@
-<%link_to "Play Again?",root_path%>
+<%=link_to "Play Again?",root_path%>
 
 <h3>Your Guesses:</h3>
 <p><%="Start: #{@start_word}"%></p>
@@ -8,3 +8,9 @@
 <p><%="Step 4: "%> <i><%="#{@step4}"%></i></p>
 <p><%="Step 5: "%> <i><%="#{@step5}"%></i></p>
 <p><%="End: #{@end_word}"%></p>
+
+<%if @win_state == false%>
+ <h2><%="You lost!"%></h2>
+<%else%>
+<h2><%="You won!"%></h2>
+<%end%>
