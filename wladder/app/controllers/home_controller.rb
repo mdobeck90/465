@@ -29,12 +29,15 @@ class HomeController < ApplicationController
    end
   end 
 =end
+puts @step1
 if edit_distance_of_one(@step1, @step2) == false
  @win_state = false
 elsif edit_distance_of_one(@step3, @step4) == false
  @win_state = false
 elsif edit_distance_of_one(@step4, @step5) == false
  @win_state = false
+else
+ @win_state = true
 end
 
   if legal(@steps) == false
