@@ -1,0 +1,17 @@
+<p id="notice"> <%=notice%></p>
+<%=link_to 'All High Scores', high_scores_path%>
+
+<p>
+ <strong>User:</strong>
+ <%=@high_score.user%>
+</p>
+
+<p>
+ <strong>Game:</strong>
+ <%=@high_score.game%>
+</p>
+
+<p>
+ <strong>Score:</strong>
+ <%=@high_score.score%>
+</p>
