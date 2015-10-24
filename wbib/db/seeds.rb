@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+topics = Topic.create(
+  [
+    {title: "Trump 4 Prez", description: "Industry titan Donald Trump is leading the presidential race."}
+  ]
+)
+
+references = Reference.create(
+  [
+    {url: "https://www.donaldjtrump.com/", description: "Make America great again!"}
+  ]
+)
