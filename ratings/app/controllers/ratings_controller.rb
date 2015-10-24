@@ -20,7 +20,7 @@ class RatingsController < ApplicationController
   #GET /professors/:professor_id/ratings/new
   def new
     #find the professor_id in the professors table
-    @professor = Professor.find params [:professor_id] 
+    @professor = Professor.find params[:professor_id] 
     #create a new rating object in the ratings table with
     #the previously found professor_id
     @rating = @professor.ratings.new
