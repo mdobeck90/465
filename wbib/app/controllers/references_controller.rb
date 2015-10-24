@@ -1,20 +1,17 @@
 class ReferencesController < ApplicationController
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
 
-  # GET /references
-  # GET /references.json
+  # GET /topics/:topid_id/references
   def index
-    @references = Reference.all
+    @topic = Topic.find params[:topic_id]
+    @references = @topic.references
   end
 
-  # GET /references/1
-  # GET /references/1.json
-  def show
-  end
-
-  # GET /references/new
+  # GET /topics/:topic_id/references/new
+  # Find the :topic_id to input a FK into the new reference
   def new
-    @reference = Reference.new
+    @topic = Topic.find params[:topic_id] 
+    @reference = @topic.references.new
   end
 
   # GET /references/1/edit
@@ -22,42 +19,30 @@ class ReferencesController < ApplicationController
   end
 
   # POST /references
-  # POST /references.json
   def create
-    @reference = Reference.new(reference_params)
-
-    respond_to do |format|
-      if @reference.save
-        format.html { redirect_to @reference, notice: 'Reference was successfully created.' }
-        format.json { render :show, status: :created, location: @reference }
-      else
-        format.html { render :new }
-        format.json { render json: @reference.errors, status: :unprocessable_entity }
-      end
+    @topic = Topic.find params[:topic_id]  
+    @reference = @topic.references.new(reference_params)
+    if @reference.save
+      redirect_to topic_ratings_url(@topic), notice: 'Reference was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /references/1
-  # PATCH/PUT /references/1.json
   def update
-    respond_to do |format|
-      if @reference.update(reference_params)
-        format.html { redirect_to @reference, notice: 'Reference was successfully updated.' }
-        format.json { render :show, status: :ok, location: @reference }
-      else
-        format.html { render :edit }
-        format.json { render json: @reference.errors, status: :unprocessable_entity }
-      end
+    if @reference.update(reference_params)
+      redirect_to topic_references_url(@reference.topic), notice: 'Reference was successfully updated.'
+    else
+      render :edit
     end
   end
 
   # DELETE /references/1
-  # DELETE /references/1.json
   def destroy
     @reference.destroy
     respond_to do |format|
-      format.html { redirect_to references_url, notice: 'Reference was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to topic_references_url(@reference.topic), notice: 'Reference was successfully destroyed.' }
     end
   end
 
