@@ -14,6 +14,6 @@ topics = Topic.create(
 
 references = Reference.create(
   [
-    {url: "https://www.donaldjtrump.com/", description: "Make America great again!"}
+    {url: "https://www.donaldjtrump.com/", description: "Make America great again!", topic_id: topics[0].id}
   ]
 )

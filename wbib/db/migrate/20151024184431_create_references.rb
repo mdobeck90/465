@@ -3,6 +3,7 @@ class CreateReferences < ActiveRecord::Migration
     create_table :references do |t|
       t.text :url
       t.text :description
+      t.integer :topic_id
 
       t.timestamps null: false
     end

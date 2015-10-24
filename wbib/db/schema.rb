@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20151024184431) do
   create_table "references", force: :cascade do |t|
     t.text     "url"
     t.text     "description"
+    t.integer  "topic_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

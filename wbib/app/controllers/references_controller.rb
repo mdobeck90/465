@@ -22,8 +22,9 @@ class ReferencesController < ApplicationController
   def create
     @topic = Topic.find params[:topic_id]  
     @reference = @topic.references.new(reference_params)
+
     if @reference.save
-      redirect_to topic_ratings_url(@topic), notice: 'Reference was successfully created.'
+      redirect_to topic_url(@topic), notice: 'Reference was successfully created.'
     else
       render :new
     end
@@ -32,7 +33,7 @@ class ReferencesController < ApplicationController
   # PATCH/PUT /references/1
   def update
     if @reference.update(reference_params)
-      redirect_to topic_references_url(@reference.topic), notice: 'Reference was successfully updated.'
+      redirect_to topic_url(@reference.topic), notice: 'Reference was successfully updated.'
     else
       render :edit
     end
@@ -41,9 +42,7 @@ class ReferencesController < ApplicationController
   # DELETE /references/1
   def destroy
     @reference.destroy
-    respond_to do |format|
-      format.html { redirect_to topic_references_url(@reference.topic), notice: 'Reference was successfully destroyed.' }
-    end
+      redirect_to topic_url(@reference.topic), notice: 'Reference was successfully destroyed.'
   end
 
   private
