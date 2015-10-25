@@ -14,8 +14,8 @@
   <p>There doesn't seem to be any References here!<p>
 
 <% else %>
-
 <table id="references">
+<!--if the new record already exists don't go through with it -->
   <tr>
     <th>Reference</th> 
     <th>Description</th> 
@@ -23,16 +23,22 @@
   </tr>
 
   <% @topic.references.each do |reference| %>
+    <% if !reference.new_record? %>
     <tr>
       <td><%= reference.url  %></td>
       <td><%= reference.description %></td>
       <td><%= reference.created_at %></td>
       <td><%= link_to 'Destroy', reference, method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
+<% end %>
   <% end %>
 </table>
 
 <% end %>
+
+<h4>Create New Rating</h4>
+<%= render 'references/form' %>
+<br>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
