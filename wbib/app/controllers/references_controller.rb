@@ -22,7 +22,8 @@ class ReferencesController < ApplicationController
   def create
     @topic = Topic.find params[:topic_id]  
     @reference = @topic.references.new(reference_params)
-
+  
+    
     if @reference.save
       redirect_to topic_url(@topic), notice: 'Reference was successfully created.'
     else

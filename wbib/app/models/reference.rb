@@ -1,7 +1,8 @@
 class Reference < ActiveRecord::Base
 
-  before_save :http_concat
-
+  before_save :http_concat 
+  
+  
   belongs_to :topic
   
   validates :url, :description, presence: true

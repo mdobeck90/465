@@ -27,7 +27,7 @@
     <tr>
       <td><a href="<%= reference.url  %>" target="_blank"><%= reference.url %></a></td>
       <td><%= reference.description %></td>
-      <td><%= reference.created_at %></td>
+      <td><%= reference.created_at.in_time_zone("Pacific Time (US & Canada)").strftime("%a %b %e %r %Y") %></td>
       <td><%= link_to 'Destroy', reference, method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
 <% end %>
