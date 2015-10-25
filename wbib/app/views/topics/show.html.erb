@@ -10,21 +10,29 @@
   <%= @topic.description %>
 </p>
 
+<% if Reference.where(topic_id: @topic.id).count < 1 %>
+  <p>There doesn't seem to be any References here!<p>
+
+<% else %>
+
 <table id="references">
   <tr>
     <th>Reference</th> 
+    <th>Description</th> 
     <th>Creation Time</th> 
   </tr>
 
   <% @topic.references.each do |reference| %>
     <tr>
-      <td><%= reference.url  %><br>
-      <p id = "description"><%= reference.description %></td></p>
+      <td><%= reference.url  %></td>
+      <td><%= reference.description %></td>
       <td><%= reference.created_at %></td>
       <td><%= link_to 'Destroy', reference, method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
 </table>
+
+<% end %>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
