@@ -1,3 +1,10 @@
+<% if @topic.title == "Trump 4 Prez" %>
+  <%= stylesheet_link_tag "trump4prez.css" %>
+<% else %>
+  <%= stylesheet_link_tag "basic_stylesheet.css" %>
+<%end%>
+
+<div class="main">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -40,5 +47,9 @@
 <%= render 'references/form' %>
 <br>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<ul class="show-nav">
+  <li><%= link_to 'Edit', edit_topic_path(@topic) %></li> 
+  <li><%= link_to 'Back', topics_path %></li>
+</ul>
+
+</div><!-- main wrapper div-->

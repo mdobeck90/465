@@ -1,0 +1,21 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+
+a:hover, a:active {
+  background-color: grey;
+}
+
+li {
+  display: inline;
+}
