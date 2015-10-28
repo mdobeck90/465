@@ -12,7 +12,7 @@
 
 <p>
   <strong>Likes:</strong>
-  <%= @quotation.likes %>
+  <%= render 'like', quotation: @quotation %>
 </p>
 
 <%= link_to 'Edit', edit_quotation_path(@quotation) %> |

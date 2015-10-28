@@ -61,6 +61,12 @@ class QuotationsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /quotations/:id/like
+  def like
+    @quotation = Quotation.find(params[:id])
+    @quotation.likes = @quotation.likes + 1 
+    @quotation.save
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quotation

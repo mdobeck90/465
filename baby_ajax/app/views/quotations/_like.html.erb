@@ -1,4 +1,4 @@
 <%= form_for(quotation, url: {controller: "quotations", action: "like", id: quotation.id.to_s}, remote: true) do |f| %>
-  <span id="like_count"><%= quotation.likes %></span>
+  <span id="like_count <%= quotation.id.to_s %>"><%= quotation.likes %></span>
   <%= f.submit "I like it" %>
 <% end %>
