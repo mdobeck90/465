@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quote: MyString
+  speaker: MyString
+  likes: 1
+
+two:
+  quote: MyString
+  speaker: MyString
+  likes: 1
