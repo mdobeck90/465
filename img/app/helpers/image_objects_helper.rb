@@ -1,0 +1,2 @@
+module ImageObjectsHelper
+end
