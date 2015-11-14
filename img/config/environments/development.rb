@@ -1,4 +1,6 @@
 Rails.application.configure do
+  #devise settings for development user email setup
+  config.action_mailer.default_url_options = {:host=>'localhost3000'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
