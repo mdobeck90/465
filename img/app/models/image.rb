@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   
   has_many :ImageUsers
   has_many :Tags
-  has_many :Images, :through => :ImageUsers
+  has_many :Users, :through => :ImageUsers
 
   belongs_to :User
   

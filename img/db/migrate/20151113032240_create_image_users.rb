@@ -1,8 +1,8 @@
 class CreateImageUsers < ActiveRecord::Migration
   def change
     create_table :image_users do |t|
-      t.integer :image_id
-      t.integer :user_id
+      t.belongs_to :image, index: true
+      t.belongs_to :user, index: true
 
       t.timestamps null: false
     end

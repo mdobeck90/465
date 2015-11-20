@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20151114234352) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "image_users", ["image_id"], name: "index_image_users_on_image_id"
+  add_index "image_users", ["user_id"], name: "index_image_users_on_user_id"
+
   create_table "images", force: :cascade do |t|
     t.string   "filename"
     t.boolean  "private"
