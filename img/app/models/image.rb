@@ -10,5 +10,5 @@ class Image < ActiveRecord::Base
     chars = [('a'..'z'), (1..99)].map { |i| i.to_a }.flatten 
     filename = (1..6).map {chars[rand(chars.length)]}.join
   end
-  
+
 end
