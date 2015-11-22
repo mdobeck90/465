@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+    @user = User.find_by_id(@image.user_id)
   end
 
   # GET /images/new
@@ -26,6 +27,13 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
     @image.generate_filename
+    @image.user = current_user
+
+    @uploaded_io = params[:image][:uploaded_file]
+
+    File.open(Rails.root.join('public', 'images', @image.filename), 'wb') do |file|
+      file.write(@uploaded_io.read)
+    end
 
     respond_to do |format|
       if @image.save

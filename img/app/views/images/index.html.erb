@@ -2,30 +2,22 @@
 
 <h1>Listing Images</h1>
 
-<!--<table>
-  <thead>
-    <tr>
-    </tr>
-  </thead>
-
-  <tbody>
--->
-    <% @images.each do |image| %>
-      <!--<tr>-->
-      <div class="wrap">
-        <div class="tile">
-          <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
-        </div>
+  <% @images.each do |image| %>
+    <div class="wrap">
+      <div class="tile">
+        <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
       </div>
-        <!--<td>image.private </td>
-        <td> image.user_id </td>
-        <td>link_to 'Show', image </td>
-        <td>link_to 'Edit', edit_image_path(image) </td>
-        <td> link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } </td>-->
-      <!--</tr>-->
-    <% end %>
+    </div>
+
+<!--<td>image.private </td>
+<td> image.user_id </td>
+<td>link_to 'Show', image </td>
+<td>link_to 'Edit', edit_image_path(image) </td>
+<td> link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } </td>-->
+<!--</tr>-->
+<% end %>
 <!--
-  </tbody>
+</tbody>
 </table>
 -->
 
