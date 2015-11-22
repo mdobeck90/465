@@ -4,6 +4,8 @@ class Image < ActiveRecord::Base
   has_many :Tags
   has_many :Users, :through => :ImageUsers
 
+  before_save :generate_filename
+
   belongs_to :User
 
   def generate_filename

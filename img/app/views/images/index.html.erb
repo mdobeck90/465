@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Image', new_image_path %>
 
-<h1>Listing Images</h1>
+<h1>Public Images</h1>
 
   <% @images.each do |image| %>
     <div class="wrap">
@@ -23,4 +24,3 @@
 
 <br>
 
-<%= link_to 'New Image', new_image_path %>
