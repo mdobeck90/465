@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Filename:</strong>
-  <%= @image.filename %>
-</p>
+<%= image_tag(@image.filename)  %>
 
 <p>
   <strong>Private:</strong>
@@ -11,12 +8,7 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @image.user_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Image Owner:</strong>
   <%= @user.name %>
 </p>
 
