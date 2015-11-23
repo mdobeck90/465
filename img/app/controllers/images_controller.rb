@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
   # GET /images
   # GET /images.json
   def index
@@ -20,6 +21,10 @@ class ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
+    #@user = User.find_by_id(@image.user_id)
+    if current_user.id != @user.id
+      redirect_to @image, notice: 'You do not own this image.'
+    end
   end
 
   # POST /images
@@ -74,6 +79,10 @@ class ImagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_image
       @image = Image.find(params[:id])
+    end
+
+    def set_user
+      @user = User.find_by_id(@image.user_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
