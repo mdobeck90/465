@@ -21,9 +21,8 @@ class ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
-    #@user = User.find_by_id(@image.user_id)
     if current_user.id != @user.id
-      redirect_to @image, notice: 'You do not own this image.'
+      redirect_to @image, notice: "You do not own this image."
     end
   end
 
