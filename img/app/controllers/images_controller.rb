@@ -22,7 +22,8 @@ class ImagesController < ApplicationController
   # GET /images/1/edit
   def edit
     if current_user.id != @user.id
-      redirect_to @image, notice: "You do not own this image."
+      redirect_to @image#, notice: "You do not own this image."
+      flash[:notice] = "You do not own this image."
     end
   end
 
