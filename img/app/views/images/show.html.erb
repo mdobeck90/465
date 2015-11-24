@@ -5,9 +5,10 @@
   <p>
     <strong>Tags:</strong>
     <br>
-    <% @tag.each do |item| %>
-      <%= item.str  %>
-      <%= link_to 'Destroy', item, method: :delete, data: {confirm: 'Delete this tag?'}  %>
+    <% @tag.each do |tag| %>
+      <%= tag.str  %>
+      <%= link_to 'Edit', edit_tag_path(tag)  %> |
+      <%= link_to 'Destroy', tag, method: :delete, data: {confirm: 'Delete this tag?'}  %>
       <br>
     <% end %>
   </p>

@@ -5,10 +5,6 @@
   <%= @tag.str %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @tag.image_id %>
-</p>
 
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<%= link_to 'Back', image_url(@tag.image) %>
