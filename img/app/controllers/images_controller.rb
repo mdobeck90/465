@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_tag, only: [:show, :edit, :update, :destroy]
   
   # GET /images
   # GET /images.json
@@ -22,8 +23,7 @@ class ImagesController < ApplicationController
   # GET /images/1/edit
   def edit
     if current_user.id != @user.id
-      redirect_to @image#, notice: "You do not own this image."
-      flash[:notice] = "You do not own this image."
+      redirect_to @image, notice: "You do not own this image."
     end
   end
 
@@ -83,6 +83,10 @@ class ImagesController < ApplicationController
 
     def set_user
       @user = User.find_by_id(@image.user_id)
+    end
+
+    def set_tag
+      @tag = Tag.where(image_id: @image.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
