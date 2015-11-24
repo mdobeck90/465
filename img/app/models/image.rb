@@ -1,12 +1,12 @@
 class Image < ActiveRecord::Base
   
-  has_many :ImageUsers
-  has_many :Tags
-  has_many :Users, :through => :ImageUsers
+  has_many :imageusers
+  has_many :tags
+  has_many :users, :through => :ImageUsers
 
   before_save :generate_filename
 
-  belongs_to :User
+  belongs_to :user
 
   def generate_filename
     chars = [('a'..'z'), (1..99)].map { |i| i.to_a }.flatten 

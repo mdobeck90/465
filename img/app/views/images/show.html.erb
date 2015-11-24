@@ -7,6 +7,7 @@
     <br>
     <% @tag.each do |item| %>
       <%= item.str  %>
+      <%= link_to 'Destroy', item, method: :delete, data: {confirm: 'Delete this tag?'}  %>
       <br>
     <% end %>
   </p>
