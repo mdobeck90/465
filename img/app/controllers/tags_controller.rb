@@ -14,7 +14,8 @@ class TagsController < ApplicationController
 
   # GET /tags/new
   def new
-    @tag = Tag.new
+    @image = Image.find params[:image_id]
+    @tag = @image.tags.new
   end
 
   # GET /tags/1/edit
@@ -24,7 +25,8 @@ class TagsController < ApplicationController
   # POST /tags
   # POST /tags.json
   def create
-    @tag = Tag.new(tag_params)
+    @image = Image.find params[:image_id] 
+    @tag = @image.tags.new(tag_params)
 
     respond_to do |format|
       if @tag.save

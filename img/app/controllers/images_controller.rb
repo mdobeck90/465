@@ -1,7 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :set_tag, only: [:show, :edit, :update, :destroy]
   
   # GET /images
   # GET /images.json
@@ -13,6 +12,7 @@ class ImagesController < ApplicationController
   # GET /images/1.json
   def show
     @user = User.find_by_id(@image.user_id)
+    @tag = @image.tags.new 
   end
 
   # GET /images/new
@@ -83,10 +83,6 @@ class ImagesController < ApplicationController
 
     def set_user
       @user = User.find_by_id(@image.user_id)
-    end
-
-    def set_tag
-      @tag = Tag.where(image_id: @image.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

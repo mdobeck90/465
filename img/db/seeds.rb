@@ -245,7 +245,6 @@ images = Image.create(
     { filename: "197.jpg", private: "t", user_id: 19 },
     { filename: "198.jpg", private: "f", user_id: 25 },
     { filename: "199.jpg", private: "t", user_id: 25 },
-    { filename: "200.jpg", private: "f", user_id: 1 },
     { filename: "201.jpg", private: "f", user_id: 21 },
     { filename: "202.jpg", private: "f", user_id: 25 },
     { filename: "203.jpg", private: "f", user_id: 9 },
