@@ -10,7 +10,9 @@ class Image < ActiveRecord::Base
 
   def generate_filename
     chars = [('a'..'z'), (1..99)].map { |i| i.to_a }.flatten 
-    filename = (1..6).map { chars[rand(chars.length)] }.join
+    new_filename = (1..6).map { chars[rand(chars.length)] }.join
+    new_filename = "#{new_filename}" + ".jpg"
+    self.filename = new_filename
   end
 
 end
