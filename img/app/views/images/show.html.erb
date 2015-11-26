@@ -13,20 +13,24 @@
     <% @image.tags.each do |tag| %>
       <% if !tag.new_record? %>
         <%= tag.str  %>
-        <% if current_user.id == @image.user_id%>
-          <%= link_to 'Edit', edit_tag_path(tag)  %> |
-          <%= link_to 'Destroy', tag, method: :delete, data: {confirm: 'Delete this tag?'}  %>
+        <% if user_signed_in? %>
+          <% if current_user.id == @image.user_id %>
+            <%= link_to 'Edit', edit_tag_path(tag)  %> |
+            <%= link_to 'Destroy', tag, method: :delete, data: {confirm: 'Delete this tag?'}  %>
+          <% end %>
         <% end %>
         <br>
       <% end %>
     <% end %>
 </p>
 
-<% if current_user.id == @image.user_id%>
-  <p>
-    <strong>New Tag:</strong>
-    <%= render 'tags/form' %>
-  </p>
+<% if user_signed_in? %>
+  <% if current_user.id == @image.user_id %>
+    <p>
+      <strong>New Tag:</strong>
+      <%= render 'tags/form' %>
+    </p>
+  <% end %>
 <% end %>
 
 <p>
