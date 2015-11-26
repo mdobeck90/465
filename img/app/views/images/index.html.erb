@@ -1,25 +1,35 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'New Image', new_image_path %>
 
-<h1>Public Images</h1>
+<div class="wrap">
 
+<% if user_signed_in? %>
+  <h2>My Images</h2>
   <% @images.each do |image| %>
-    <div class="wrap">
     <% if current_user.id == image.user_id %>
-      <h2>My Images</h2>
-      <div class="tile">
-        <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
-      </div>
-    <% elsif @imageusers.where(image_id: image.id, user_id: current_user.id)? %>
-      <h2>Private Images</h2>
-      <div class="tile">
-        <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
-      </div>
-    <% elsif current_user.id != image.user_id  && current_user.id != @imageuser.user_id %>
       <div class="tile">
         <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
       </div>
     <% end %>
+  <% end %>
+  
+  <h2>Private Images</h2>
+  <% @imageusers.each do |imageuser| %>
+    <div class="tile">
+      <%= link_to(image_tag(Image.find(imageuser.id).filename, :class => "img-thumbnail"), Image.find(imageuser.id)) %>
     </div>
   <% end %>
 
+<% else #show all public images %>
+
+  <h2>Public Images</h2>
+  <% @images.each do |image| %>
+    <div class="tile">
+      <%= link_to(image_tag(image.filename, :class => "img-thumbnail"), image) %>
+    </div>
+  <% end %>
+
+
+<% end %>
+
+</div>
