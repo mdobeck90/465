@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'New Image', new_image_path %>
 
-<div class="wrap">
+<div class="wrapper">
 
 <% if user_signed_in? %>
   <h2>My Images</h2>
@@ -12,13 +12,17 @@
       </div>
     <% end %>
   <% end %>
-  
+</div>
+  <br> 
+
+<div class="wrapper">
   <h2>Private Images</h2>
   <% @imageusers.each do |imageuser| %>
     <div class="tile">
-      <%= link_to(image_tag(Image.find(imageuser.id).filename, :class => "img-thumbnail"), Image.find(imageuser.id)) %>
+      <%= link_to(image_tag(Image.find(imageuser.image_id).filename, :class => "img-thumbnail"), Image.find(imageuser.image_id)) %>
     </div>
   <% end %>
+</div>
 
 <% else #show all public images %>
 
@@ -31,5 +35,3 @@
 
 
 <% end %>
-
-</div>
