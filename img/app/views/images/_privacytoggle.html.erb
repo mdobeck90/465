@@ -11,12 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :private %><br>
-    <%= f.check_box :private %>
-  </div>
-
   <div class="actions">
-    <%= f.submit %>
+  <% if @image.private == true %>
+    <%= f.hidden_field(:private, :value => "false") %>
+    <%= f.submit "Make Image Public" %>
+  <% else %>
+    <%= f.hidden_field(:private, :value => "true") %>
+    <%= f.submit "Make Image Private" %>
+  <% end %>
   </div>
+ 
 <% end %>

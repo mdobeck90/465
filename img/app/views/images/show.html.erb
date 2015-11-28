@@ -32,16 +32,21 @@
   <% end %>
 <% end %>
 
+<% if @image.private == true %>
+  <p>Image is: <strong><%= "Private"  %></strong></p>
+<% else %>
+  <p>Image is: <strong><%= "Public"  %></strong></p>
+<% end %>
 <p>
-  <% if @image.private == true %>
-    <p>Image is: <strong><%= "Private"  %></strong></p>
-  <% else %>
-    <p>Image is: <strong><%= "Public"  %></strong></p>
+
+<% if user_signed_in? %>
+  <% if current_user.id == @image.user_id %>
+    <%= render 'privacytoggle' %>
   <% end %>
+<% end %>
     
 </p>
 
-<%= render 'privacytoggle' %>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
