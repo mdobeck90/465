@@ -33,13 +33,15 @@
 <% end %>
 
 <p>
-  <strong>Private:</strong>
-  <%= @image.private %>
+  <% if @image.private == true %>
+    <p>Image is: <strong><%= "Private"  %></strong></p>
+  <% else %>
+    <p>Image is: <strong><%= "Public"  %></strong></p>
+  <% end %>
+    
 </p>
 
-<%= render 'privactytoggle' %>
-
-
+<%= render 'privacytoggle' %>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
