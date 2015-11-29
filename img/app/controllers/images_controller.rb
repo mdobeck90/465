@@ -34,10 +34,14 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
+    if image_params.length == 1
+      render :new
+    end
+
     @image = Image.new(image_params)
     @image.generate_filename
     @image.user_id = current_user.id
-
+    
     @uploaded_io = params[:image][:uploaded_file]
 
     File.open(Rails.root.join('public', 'images', @image.filename), 'wb') do |file|
