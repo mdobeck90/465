@@ -25,21 +25,8 @@ class ImagesController < ApplicationController
 
     if user_signed_in?
       #arrays of user name strings
-      @userlist = Array.new
-      rawusers = User.all
-      add_user = false
-        rawusers.each do |user|
-          @accesslist.each do |user_w_access|
-            if user.id == user_w_access.user_id || user.name == current_user.name
-              add_user = false
-            else
-              add_user = true
-            end
-          end
-        if add_user == true
-          @userlist.push(user.name)
-        end
-      end
+      tmp_array = Array.new
+      @userlist = tmp_array.users_without_access
     end
   end
 

@@ -13,5 +13,9 @@ class Image < ActiveRecord::Base
     new_filename = "#{new_filename}" + ".jpg"
     self.filename = new_filename
   end
+  
+  def users_without_access
+    users_w_access = User.all - self.users
+  end
 
 end
