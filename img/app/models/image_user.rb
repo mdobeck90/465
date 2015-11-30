@@ -1,6 +1,6 @@
 class ImageUser < ActiveRecord::Base
 
-  belongs_to :User
-  belongs_to :Image
+  belongs_to :user
+  belongs_to :image
 
 end

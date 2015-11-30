@@ -34,16 +34,23 @@
 
 <p>
 <strong>Access List:</strong>
+</p>
   <% if @accesslist.length == 0 %>
     <%= "There's no one here!  Add someone to your list!" %>
   <% else %>
     <% @accesslist.each do |imageuser|  %>
         <% if imageuser.user_id != nil %>
-          <p><%= User.find(imageuser.user_id).name  %><p>
+          <p>
+            <%= User.find(imageuser.user_id).name  %>
+            <%= link_to 'Destroy', imageuser, method: :delete, data: {confirm: "Remove #{User.find(imageuser.user_id).name} from the Access List?"} %>
+          </p> 
         <% end %>
     <% end %>
   <% end %>
-</p>
+
+<% if @image.private == true %>
+  <p><strong>Add User to Access List</strong></p>
+<% end %>
 
 <% if @image.private == true %>
   <p>Image is: <strong><%= "Private"  %></strong></p>
