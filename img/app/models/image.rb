@@ -16,6 +16,8 @@ class Image < ActiveRecord::Base
   
   def users_without_access
     users_w_access = User.all - self.users
+    
+    users_w_access.map { |user| "#{user.name}" + "#{user.email}" +  "#{user.id}" }
   end
 
 end
