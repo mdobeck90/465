@@ -1,6 +1,6 @@
 class Image < ActiveRecord::Base
   
-  has_many :imageusers
+  has_many :ImageUsers
   has_many :tags
   has_many :users, :through => :ImageUsers
 

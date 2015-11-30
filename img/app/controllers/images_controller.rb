@@ -16,8 +16,16 @@ class ImagesController < ApplicationController
   # GET /images/1.json
   def show
     @user = User.find_by_id(@image.user_id)
+
     @tag = @image.tags.new 
+
     @accesslist = ImageUser.where(image_id: @image.id)
+
+    @userlist = Array.new
+    rawusers = User.all
+    rawusers.each do |user|
+      @userlist.push(user.name)
+    end
   end
 
   # GET /images/new

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :ImageUsers  
-  has_many :Images, :through => :ImageUsers
+  has_many :images, :through => :ImageUsers
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

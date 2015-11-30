@@ -49,7 +49,7 @@
   <% end %>
 
 <% if @image.private == true %>
-  <p><strong>Add User to Access List</strong></p>
+  <%= render 'tags/accesslist' %> 
 <% end %>
 
 <% if @image.private == true %>
