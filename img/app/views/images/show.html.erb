@@ -32,13 +32,26 @@
   <% end %>
 <% end %>
 
+<p>
+<strong>Access List:</strong>
+  <% if @accesslist.length == 0 %>
+    <%= "There's no one here!  Add someone to your list!" %>
+  <% else %>
+    <% @accesslist.each do |imageuser|  %>
+        <% if imageuser.user_id != nil %>
+          <p><%= User.find(imageuser.user_id).name  %><p>
+        <% end %>
+    <% end %>
+  <% end %>
+</p>
+
 <% if @image.private == true %>
   <p>Image is: <strong><%= "Private"  %></strong></p>
 <% else %>
   <p>Image is: <strong><%= "Public"  %></strong></p>
 <% end %>
-<p>
 
+<p>
 <% if user_signed_in? %>
   <% if current_user.id == @image.user_id %>
     <%= render 'privacytoggle' %>

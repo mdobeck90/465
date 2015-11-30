@@ -17,6 +17,7 @@ class ImagesController < ApplicationController
   def show
     @user = User.find_by_id(@image.user_id)
     @tag = @image.tags.new 
+    @accesslist = ImageUser.where(image_id: @image.id)
   end
 
   # GET /images/new
