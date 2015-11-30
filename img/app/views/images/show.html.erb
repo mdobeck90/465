@@ -48,7 +48,7 @@
     <% end %>
   <% end %>
 
-<% if @image.private == true  && current_user == @image.user_id %>
+<% if @image.private == true  && current_user.id == @image.user_id %>
   <%= render 'image_users/accesslist' %> 
 <% end %>
 
