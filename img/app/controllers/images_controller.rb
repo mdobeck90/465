@@ -25,7 +25,9 @@ class ImagesController < ApplicationController
     @userlist = Array.new
     rawusers = User.all
     rawusers.each do |user|
-      @userlist.push(user.name)
+      if user.name != current_user.name
+        @userlist.push(user.name)
+      end
     end
   end
 
