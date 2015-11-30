@@ -25,8 +25,7 @@ class ImagesController < ApplicationController
 
     if user_signed_in?
       #arrays of user name strings
-      tmp_array = Array.new
-      @userlist = tmp_array.users_without_access
+      @userlist = @image.users_without_access
     end
   end
 
