@@ -18,6 +18,7 @@ class ImagesController < ApplicationController
     @user = User.find_by_id(@image.user_id)
 
     @tag = @image.tags.new 
+    @image_user = @image.ImageUsers.new
 
     @accesslist = ImageUser.where(image_id: @image.id)
 

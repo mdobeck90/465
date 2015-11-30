@@ -1,22 +1,25 @@
 <%= form_for([@image,@image_user]) do |f| %>
-  <% if @image.errors.any? %>
+  <% if @image_user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+      <h2><%= pluralize(@image_user.errors.count, "error") %> prohibited this image from being saved:</h2>
 
       <ul>
-      <% @image.errors.full_messages.each do |message| %>
+      <% @image_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="actions">
-
   <% if @image.private == true %>
     <p><strong>Add User to Access List</strong></p>
-    <%= select_tag "Users", options_for_select(@userlist) %>
-    <%= f.submit "Add User" %>
+    <div class="field">
+      <%= select_tag "Users", options_for_select(@userlist) %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Add User" %>
+    </div>
   <% end %>
-  </div>
+
 <% end %>

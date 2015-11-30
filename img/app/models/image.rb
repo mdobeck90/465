@@ -3,6 +3,7 @@ class Image < ActiveRecord::Base
   has_many :ImageUsers
   has_many :tags
   has_many :users, :through => :ImageUsers
+  accepts_nested_attributes_for :ImageUsers
 
   belongs_to :user
 

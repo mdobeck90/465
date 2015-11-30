@@ -4,7 +4,7 @@ class ImageUsersController < ApplicationController
   # GET /image_users
   # GET /image_users.json
   def index
-    @image_users = ImageUser.all
+    @ImageUsers = ImageUser.all
   end
 
   # GET /image_users/1
@@ -14,7 +14,8 @@ class ImageUsersController < ApplicationController
 
   # GET /image_users/new
   def new
-    @image_user = ImageUser.new
+    @image = Image.find params[:image_id]
+    @image_user = @image.ImageUsers.new
   end
 
   # GET /image_users/1/edit
@@ -24,11 +25,12 @@ class ImageUsersController < ApplicationController
   # POST /image_users
   # POST /image_users.json
   def create
-    @image_user = ImageUser.new(image_user_params)
+    @image = Image.find params[:image_id]
+    @image_user = @image.ImageUsers.new(image_user_params)
 
     respond_to do |format|
       if @image_user.save
-        format.html { redirect_to @image_user, notice: 'Image user was successfully created.' }
+        format.html { redirect_to image_url(@image), notice: 'Image user was successfully created.' }
         format.json { render :show, status: :created, location: @image_user }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class ImageUsersController < ApplicationController
   def update
     respond_to do |format|
       if @image_user.update(image_user_params)
-        format.html { redirect_to @image_user, notice: 'Image user was successfully updated.' }
+        format.html { redirect_to image_url(@image_user.image), notice: 'Image user was successfully updated.' }
         format.json { render :show, status: :ok, location: @image_user }
       else
         format.html { render :edit }
