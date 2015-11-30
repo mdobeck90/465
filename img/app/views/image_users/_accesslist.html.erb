@@ -15,6 +15,7 @@
     <p><strong>Add User to Access List</strong></p>
     <div class="field">
       <%= select_tag "Users", options_for_select(@userlist) %>
+      <%= f.hidden_field(:image_user, :value => "Test") %>
     </div>
 
     <div class="actions">

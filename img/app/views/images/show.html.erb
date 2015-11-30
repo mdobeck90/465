@@ -38,7 +38,7 @@
   <% if @accesslist.length == 0 %>
     <%= "There's no one here!  Make your image private to add someone to your list!" %>
   <% else %>
-    <% @accesslist.each do |imageuser|  %>
+    <% @accesslist.each do |imageuser| %>
         <% if imageuser.user_id != nil %>
           <p>
             <%= User.find(imageuser.user_id).name  %>

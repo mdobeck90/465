@@ -20,13 +20,25 @@ class ImagesController < ApplicationController
     @tag = @image.tags.new 
     @image_user = @image.ImageUsers.new
 
+    #image_users who have access to the private image
     @accesslist = ImageUser.where(image_id: @image.id)
 
-    @userlist = Array.new
-    rawusers = User.all
-    rawusers.each do |user|
-      if user.name != current_user.name
-        @userlist.push(user.name)
+    if user_signed_in?
+      #arrays of user name strings
+      @userlist = Array.new
+      rawusers = User.all
+      add_user = false
+        rawusers.each do |user|
+          @accesslist.each do |user_w_access|
+            if user.id == user_w_access.user_id || user.name == current_user.name
+              add_user = false
+            else
+              add_user = true
+            end
+          end
+        if add_user == true
+          @userlist.push(user.name)
+        end
       end
     end
   end
