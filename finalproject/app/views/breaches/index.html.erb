@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Breaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Integer</th>
+      <th>Target</th>
+      <th>Integer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breaches.each do |breach| %>
+      <tr>
+        <td><%= breach.user_id %></td>
+        <td><%= breach.integer %></td>
+        <td><%= breach.target_id %></td>
+        <td><%= breach.integer %></td>
+        <td><%= link_to 'Show', breach %></td>
+        <td><%= link_to 'Edit', edit_breach_path(breach) %></td>
+        <td><%= link_to 'Destroy', breach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Breach', new_breach_path %>
