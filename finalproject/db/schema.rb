@@ -14,9 +14,8 @@
 ActiveRecord::Schema.define(version: 20151204024833) do
 
   create_table "breaches", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "integer"
-    t.string   "target_id"
+    t.integer  "user_id"
+    t.integer  "target_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

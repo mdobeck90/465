@@ -1,10 +1,8 @@
 class CreateBreaches < ActiveRecord::Migration
   def change
     create_table :breaches do |t|
-      t.string :user_id
-      t.string :integer
-      t.string :target_id
-      t.string :integer
+      t.integer :user_id
+      t.integer :target_id
 
       t.timestamps null: false
     end
