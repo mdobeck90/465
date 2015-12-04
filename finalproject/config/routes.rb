@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :sessions
+  resources :sessions
   resources :breaches
   resources :users
   root 'sessions#show'
