@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :operatives
   root 'sessions#new'
 
   get 'signup' => 'users#new'

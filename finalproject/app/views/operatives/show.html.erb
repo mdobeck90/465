@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @operative.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @operative.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @operative.status %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @operative.skill %>
+</p>
+
+<p>
+  <strong>Deployment time:</strong>
+  <%= @operative.deployment_time %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @operative.job_id %>
+</p>
+
+<%= link_to 'Edit', edit_operative_path(@operative) %> |
+<%= link_to 'Back', operatives_path %>

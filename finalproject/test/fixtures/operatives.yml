@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  name: MyString
+  status: MyString
+  skill: 1
+  deployment_time: 2015-12-04 14:43:25
+  job_id: 1
+
+two:
+  user_id: 1
+  name: MyString
+  status: MyString
+  skill: 1
+  deployment_time: 2015-12-04 14:43:25
+  job_id: 1
