@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
+#bcrypt gem for has_secure_password functinon inside models/user.rb
+gem 'bcrypt', '3.1.7'
 
+#error handling gem.  Alos Some debugging
 gem 'quiet_assets', group: :development
 gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development

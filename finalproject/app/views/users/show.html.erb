@@ -1,14 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<ul class="nav">
+  <%= link_to 'Edit Account', edit_user_path(@user) %>
+</ul
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
+  <strong><%= @user.name %></strong>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
