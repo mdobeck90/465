@@ -26,14 +26,10 @@ class OperativesController < ApplicationController
   def create
     @operative = Operative.new(operative_params)
 
-    respond_to do |format|
-      if @operative.save
-        format.html { redirect_to @operative, notice: 'Operative was successfully created.' }
-        format.json { render :show, status: :created, location: @operative }
-      else
-        format.html { render :new }
-        format.json { render json: @operative.errors, status: :unprocessable_entity }
-      end
+    if @operative.save
+      redirect_to @operative, notice: 'Operative was successfully created.'
+    else
+      render :new
     end
   end
 
