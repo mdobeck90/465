@@ -51,10 +51,7 @@ class OperativesController < ApplicationController
   # DELETE /operatives/1.json
   def destroy
     @operative.destroy
-    respond_to do |format|
-      format.html { redirect_to operatives_url, notice: 'Operative was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      redirect_to user_url(@operative.user), notice: 'Operative was successfully destroyed.'
   end
 
   private
