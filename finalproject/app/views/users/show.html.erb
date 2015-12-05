@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= @user.name %></strong>
+  <strong><%= current_user.name %></strong>
 </p>
 
 <ul class="nav">
   <%= link_to 'Edit Account', edit_user_path(@user) %>
 </ul
 
-<h3>Operatives</h3>
+<h1>Operatives</h1>
 <table class="operative-table">
   <tr>
     <td>Name</td>
@@ -20,11 +20,15 @@
     <tr>
       <td><%= operative.name %></td>
       <td><%= operative.status %></td>
-      <td><% if operative.status == "injured" or operative.status == "mia" %>
-        <%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  The operative will be reduced to a fine mist. This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
-      <% end %>
       <td><%= operative.skill %></td>
-      <td><%= operative.job_id %></td>
+      <% if operative.status != "deployed" %>
+        <td>-</td>
+      <% else %>
+        <td><%= operative.job_id %></td>
+      <% end %>
+      <% if operative.status == "injured" or operative.status == "mia" %>
+        <td><%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  The operative will be reduced to a fine mist. This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
