@@ -6,24 +6,33 @@
   <li><%= link_to 'Breaches', breaches_path %></li>
 </ul>
 
-<h2>Operatives</h2>
+<h2>Operatives <%= Time.now.strftime("%H%M") %> </h2>
 <table class="operative-table">
   <tr>
     <td>Name</td>
     <td>Status</td>
     <td>Skill</td>
     <td>Job</td>
+    <td>Job Done @</td>
   </tr>
   <% @operatives.each  do |operative|%>
     <tr>
       <td><%= operative.name %></td>
       <td><%= operative.status %></td>
       <td><%= operative.skill %></td>
+
       <% if operative.status != "deployed" %>
         <td>-</td>
       <% else %>
         <td><%= operative.job_id %></td>
       <% end %>
+
+      <% if operative.deployment_time == nil %>
+        <td>-</td>
+      <% else %>
+        <td><%= operative.deployment_time.strftime("%H:%M") %></td>
+      <% end %>
+
       <% if operative.status == "injured" or operative.status == "mia" %>
         <td><%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  The operative will be reduced to a fine mist. This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
       <% end %>
