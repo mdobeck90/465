@@ -4,7 +4,7 @@ class BreachesController < ApplicationController
   # GET /breaches
   # GET /breaches.json
   def index
-    @breaches = Breach.all
+    @breaches = Breach.where(user_id: current_user.id)
   end
 
   # GET /breaches/1

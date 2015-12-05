@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<strong><%= current_user.name %></strong>
+<%= link_to 'log out', logout_path %> | 
+<%= link_to 'edit account', edit_user_path(current_user) %>
+<ul class="nav">
+  <li><%= link_to 'Home', user_path(current_user) %></li>
+</ul>
 
-<h1>Listing Breaches</h1>
+<h2>Listing Breaches</h2>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Integer</th>
-      <th>Target</th>
-      <th>Integer</th>
+      <th>Active Breaches</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +19,8 @@
   <tbody>
     <% @breaches.each do |breach| %>
       <tr>
-        <td><%= breach.user_id %></td>
-        <td><%= breach.integer %></td>
-        <td><%= breach.target_id %></td>
-        <td><%= breach.integer %></td>
+        <td><%= User.find(breach.target_id).name %></td>
         <td><%= link_to 'Show', breach %></td>
-        <td><%= link_to 'Edit', edit_breach_path(breach) %></td>
-        <td><%= link_to 'Destroy', breach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

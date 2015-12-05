@@ -1,23 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @breach.user_id %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @breach.integer %>
-</p>
-
-<p>
   <strong>Target:</strong>
-  <%= @breach.target_id %>
+  <%= User.find(@breach.target_id).name %>
 </p>
 
 <p>
-  <strong>Integer:</strong>
-  <%= @breach.integer %>
+  <strong>Breach Started:</strong>
+  <%= @breach.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_breach_path(@breach) %> |
