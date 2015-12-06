@@ -27,8 +27,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    item_params = {:user_id => @user.id}
 
     if @user.save
+      @item = Item.new(item_params)
+      @item.save
       redirect_to @user, notice: 'User was successfully created.'
     else
       render :new 
