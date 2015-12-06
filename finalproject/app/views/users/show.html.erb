@@ -42,3 +42,15 @@
       <td><%= current_user.honeypot %></td>
     </tr>
 </table>
+
+<table>
+  <caption>Active Defenses</caption>
+  <tr>
+    <td>Firewalls</td>
+    <td>Honeypots</td>
+  </tr>
+    <tr>
+      <td><%= current_user.active_firewall %></td>
+      <td><%= current_user.active_honeypot %></td>
+    </tr>
+</table>
