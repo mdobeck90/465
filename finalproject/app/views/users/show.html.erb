@@ -1,5 +1,7 @@
-<h2>Operatives <%= Time.now.strftime("%m/%d %H%M%Z") %> </h2>
-<table class="operative-table">
+<h2>HQ <%= Time.now.strftime("%m/%d %H%M%Z") %> </h2>
+
+<table>
+  <caption>Operatives</caption>
   <tr>
     <td>Name</td>
     <td>Status</td>
@@ -23,4 +25,20 @@
       <% end %>
     </tr>
   <% end %>
+</table>
+
+<table>
+  <caption>Items</caption>
+  <tr>
+    <td>Zero-days</td>
+    <td>Operative Contracts</td>
+    <td>Firewalls</td>
+    <td>Honeypots</td>
+  </tr>
+    <tr>
+      <td><%= current_user.zeroday %></td>
+      <td><%= current_user.o_contract %></td>
+      <td><%= current_user.firewall %></td>
+      <td><%= current_user.honeypot %></td>
+    </tr>
 </table>
