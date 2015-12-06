@@ -37,7 +37,7 @@ breaches = Breach.create(
 
 operatives = Operative.create(
   [
-    { user_id: 1, name: 'Smiling Gibbon', status: 'deployed', skill: 7, job_id: 1, deployment_time: t },
+    { user_id: 1, name: 'Smiling Gibbon', status: 'deployed', skill: 7, job_id: 1 },
     { user_id: 1, name: 'Sitting Tofu', status: 'injured', skill: 4, job_id: nil },
     { user_id: 1, name: 'Fuze', status: 'injured', skill: 4, job_id: nil },
     { user_id: 1, name: 'Black Swan', status: 'mia', skill: 3, job_id: nil },

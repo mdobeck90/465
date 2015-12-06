@@ -11,9 +11,6 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @operatives = @user.operatives 
-    @operatives.each do |operator|
-      operator.check_deployment_time
-    end
   end
 
   # GET /users/new
