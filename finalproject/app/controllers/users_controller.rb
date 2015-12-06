@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @operatives = current_user.operatives 
-    @items = current_user.item 
   end
 
   # GET /users/new
@@ -43,9 +42,9 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'Password was successfully updated.'
+      redirect_to @user, notice: 'Something was successfull.'
     else
-      render :edit
+      redirect_to @user
     end
   end
 
@@ -67,6 +66,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation, :firewall, :active_firewall)
+      params.require(:user).permit(:name, :password, :password_confirmation)
     end
 end

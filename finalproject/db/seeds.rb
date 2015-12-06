@@ -10,7 +10,7 @@ t = Time.now + 3
 
 users = User.create(
   [
-    { name: 'alice', password: 'a' },    
+    { name: 'alice', password: 'a', firewall: 10 },    
     { name: 'bob', password: 'b' },    
     { name: 'charlie', password: 'c' },    
     { name: 'david', password: 'd' }    
@@ -51,14 +51,5 @@ operatives = Operative.create(
     { user_id: 4, name: 'Gypsy', status: 'dead', skill: 4, job_id: nil },
     { user_id: 4, name: 'Alpha', status: 'mia', skill: 8, job_id: nil }
 
-  ]
-)
-
-items = Item.create(
-  [
-    { user_id: 1 },    
-    { user_id: 2 },    
-    { user_id: 3 },    
-    { user_id: 4 },    
   ]
 )
