@@ -36,10 +36,10 @@
     <td>Honeypots</td>
   </tr>
     <tr>
-      <td><%= current_user.zeroday %></td>
-      <td><%= current_user.o_contract %></td>
-      <td><%= current_user.firewall %></td>
-      <td><%= current_user.honeypot %></td>
+      <td><%= @items.zeroday %></td>
+      <td><%= @items.o_contract%></td>
+      <td><%= @items.firewall %></td>
+      <td><%= @items.honeypot %></td>
     </tr>
 </table>
 
@@ -50,8 +50,8 @@
     <td>Honeypots</td>
   </tr>
     <tr>
-      <td><%= current_user.active_firewall %></td>
-      <td><%= current_user.active_honeypot %></td>
+      <td><%= @items.active_firewall %></td>
+      <td><%= @items.active_honeypot %></td>
     </tr>
 </table>
 

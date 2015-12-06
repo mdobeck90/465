@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @operatives = current_user.operatives 
+    @items = current_user.item 
   end
 
   # GET /users/new

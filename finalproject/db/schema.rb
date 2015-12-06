@@ -23,14 +23,14 @@ ActiveRecord::Schema.define(version: 20151206205948) do
 
   create_table "items", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "zeroday",           default: 0
-    t.integer  "o_contract",        default: 0
-    t.integer  "honeypot",          default: 0
-    t.integer  "firewall",          default: 0
+    t.integer  "zeroday",         default: 0
+    t.integer  "o_contract",      default: 0
+    t.integer  "honeypot",        default: 0
+    t.integer  "firewall",        default: 0
     t.integer  "active_firewall"
-    t.integer  "activate_honeypot"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.integer  "active_honeypot"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "operatives", force: :cascade do |t|
