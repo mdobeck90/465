@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 <h1>Signup Page</h1>
-<div>
+<div class="signup-wrapper">
   <%= form_for(@user) do |f| %>
-    <%= f.label :Username %>
-    <%= f.text_field :name %>
+    <div>
+      <%= f.label :Username %>
+      <%= f.text_field :name %>
+    </div>
   
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
 
-    <%= f.label :password_confirmation %>
-    <%= f.password_confirmation :password_confirmation %>
+    <div>
+      <%= f.label :password_confirmation, "Password Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+    </div>
 
     <%= f.submit "Create Account" %>
 <% end %>

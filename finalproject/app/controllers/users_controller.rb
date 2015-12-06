@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  layout "new_user", only: [:new]
+  layout "new_user", only: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :authorize, :except => [:new, :create]
 
