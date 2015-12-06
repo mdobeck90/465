@@ -52,6 +52,4 @@ ActiveRecord::Schema.define(version: 20151206205948) do
     t.string   "password_digest"
   end
 
-  add_index "users", ["name"], name: "index_users_on_name", unique: true
-
 end
