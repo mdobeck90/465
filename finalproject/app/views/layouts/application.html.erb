@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<strong><%= current_user.name %></strong>
+<strong><%= current_user.name %> <%=number_to_currency(current_user.cash, precision: 0) %></strong> 
 <%= link_to 'log out', logout_path %> | 
 <%= link_to 'edit account', edit_user_path(current_user) %>
 <p id="notice"><%= notice %></p>
