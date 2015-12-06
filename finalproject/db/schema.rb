@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204224325) do
+ActiveRecord::Schema.define(version: 20151206205948) do
 
   create_table "breaches", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.boolean  "breached"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "zeroday",           default: 0
+    t.integer  "o_contract",        default: 0
+    t.integer  "honeypot",          default: 0
+    t.integer  "firewall",          default: 0
+    t.integer  "active_firewall"
+    t.integer  "activate_honeypot"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "operatives", force: :cascade do |t|
@@ -35,12 +46,6 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.string   "name"
     t.string   "password"
     t.integer  "cash",            default: 10000
-    t.integer  "zeroday",         default: 0
-    t.integer  "o_contract",      default: 0
-    t.integer  "honeypot",        default: 0
-    t.integer  "firewall",        default: 0
-    t.integer  "active_firewall", default: 0
-    t.integer  "active_honeypot", default: 0
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.string   "password_digest"
