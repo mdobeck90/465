@@ -4,7 +4,7 @@ class OperativesController < ApplicationController
   # GET /operatives
   # GET /operatives.json
   def index
-    @operatives = Operative.all
+    @operatives = current_user.operatives
   end
 
   # GET /operatives/1
