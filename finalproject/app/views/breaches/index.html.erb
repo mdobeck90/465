@@ -2,10 +2,11 @@
 
 <h2>Listing Breaches</h2>
 
+<div class="table_wrapper">
 <table>
   <thead>
     <tr>
-      <th>Active Breaches</th>
+      <th>Successfull Breaches</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,12 +14,52 @@
   <tbody>
     <% @breaches.each do |breach| %>
       <tr>
-        <td><%= User.find(breach.target_id).name %></td>
-        <td><%= link_to 'Show', breach %></td>
+        <% if breach.breached == true  %>
+          <td><%= User.find(breach.target_id).name %> <%= breach.created_at.strftime("%m-%d-%y") %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Failed Breaches</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breaches.each do |breach| %>
+      <tr>
+        <% if breach.breached == false  %>
+          <td><%= User.find(breach.target_id).name %> <%= breach.created_at.strftime("%m-%d-%y") %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Failed Enemy Breaches</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enemy_list.each do |enemy| %>
+      <tr>
+        <td><%= enemy.name %> <%= enemy.created_at.strftime("%m-%d-%y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+</div
 
 <br>
 

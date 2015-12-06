@@ -5,6 +5,11 @@ class BreachesController < ApplicationController
   # GET /breaches.json
   def index
     @breaches = Breach.where(user_id: current_user.id)
+    enemy_failed_breaches = Breach.where(target_id: current_user.id)
+    @enemy_list = Array.new
+    enemy_failed_breaches.each do |breach|
+      @enemy_list.push(User.find(breach.user_id))
+    end
   end
 
   # GET /breaches/1
