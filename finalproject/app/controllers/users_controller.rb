@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   layout "new_user", only: [:new]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize, :except => [:new]
+  before_filter :authorize, :except => [:new, :create]
 
   # GET /users
   # GET /users.json
