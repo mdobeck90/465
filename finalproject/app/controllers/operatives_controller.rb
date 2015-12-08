@@ -14,7 +14,8 @@ class OperativesController < ApplicationController
 
   # GET /operatives/new
   def new
-    @operative = Operative.new
+    @user = User.find params[:user_id]
+    @operative = @user.operatives.new
   end
 
   # GET /operatives/1/edit
@@ -24,7 +25,8 @@ class OperativesController < ApplicationController
   # POST /operatives
   # POST /operatives.json
   def create
-    @operative = Operative.new(operative_params)
+    @user = User.find params[:user_id]
+    @operative = @user.operatives.new(operative_params)
 
     if @operative.save
       redirect_to @operative, notice: 'Operative was successfully created.'
@@ -62,6 +64,6 @@ class OperativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def operative_params
-      params.require(:operative).permit(:user_id, :name, :status, :skill, :deployment_time, :job_id)
+      params.require(:operative).permit(:user_id, :name, :status, :skill, :job_id)
     end
 end

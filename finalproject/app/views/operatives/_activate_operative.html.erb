@@ -1,4 +1,4 @@
-<%= form_for([current_user,@operative]) do |f| %>
+<%= form_for([@user,@operative]) do |f| %>
   <% if @operative.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@operative.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -10,6 +10,25 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= f.hidden_field(:user_id, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:name, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:status, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:skill, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:name, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:job_id, :value => nil) %><br>
+  </div>
 
   <div class="actions">
     <%= f.submit "Hire Operative(-1 Contact)",  {:controller => "operative", :action => "create" , :method => :post} %>
