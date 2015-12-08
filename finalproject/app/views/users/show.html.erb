@@ -19,16 +19,14 @@
       <% else %>
         <td><%= operative.job_id %></td>
       <% end %>
-
-      <% if operative.status != "injured" or operative.status != "mia" %>
-        <td><%= link_to 'Fire', operative, method: :delete %></td>
-      <% end %>
-
-      <% if operative.status == "injured" or operative.status == "mia" %>
-        <td><%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
-      <% end %>
-
       
+      <% if operative.status == "injured" or operative.status == "mia" %>
+        <td><%= link_to 'Dispose', operative, method: :delete,data: {confirm: "Sever all ties and destroy all records of #{operative.name}?" }  %></td>
+      <% end %>
+      
+      <% if operative.status != "injured" and operative.status != "mia" %>
+        <td><%= link_to 'Fire', operative, method: :delete,data: {confirm: "Release #{operative.name} from contract?" } %></td>
+      <% end %>
     </tr> 
   <% end %> 
 </table>
