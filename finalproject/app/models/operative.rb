@@ -14,7 +14,12 @@ class Operative < ActiveRecord::Base
   end
 
   def generate_operative
+    f_name = operative_f_name.sample 
+    l_name = operative_l_name.sample 
     self.user_id = current_user.id
     self.name = f_name + " " + l_name
+    self.status = "idle"
+    self.skill = rand(1...3)
+    self.job_id = nil
   end
 end
