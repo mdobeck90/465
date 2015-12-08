@@ -1,11 +1,6 @@
 class OperativesController < ApplicationController
   before_action :set_operative, only: [:show, :edit, :update, :destroy]
 
-  def recontract
-    current_user.o_contract += 1
-    @operative.destroy
-    redirect_to user_url(@operative.user), notice: 'Operative was successfully re-contracted.'   
-  end
   # GET /operatives
   # GET /operatives.json
   def index
