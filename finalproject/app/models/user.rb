@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
   validates :zeroday, numericality: { :greater_than_or_equal_to => 0 }
   validates :honeypot, numericality: { :greater_than_or_equal_to => 0 }
   validates :o_contract, numericality: { :greater_than_or_equal_to => 0 }
+
+  def recontract
+    self.o_contract += 1
+  end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   get 'signup' => 'users#new'
+  post 'recontract' => 'operatives#recontract'
 
   resources :breaches
   resources :users do
