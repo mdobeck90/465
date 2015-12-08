@@ -1,4 +1,5 @@
 def operative_f_name
+[
 'adorable',
 'adventurous',
 'aggressive',
@@ -23,7 +24,7 @@ def operative_f_name
 'elegant',
 'excited',
 'fancy',
-'alive,'
+'alive',
 'annoying',
 'bad',
 'better',
@@ -53,4 +54,5 @@ def operative_f_name
 'horrible',
 'important',
 'filthy'
+]
 end
