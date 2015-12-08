@@ -21,8 +21,7 @@
       <% end %>
 
       <% if operative.status == "injured" or operative.status == "mia" %>
-        <td><%= button_to 'Re-contract', { :controller => :operative, :action => 'recontract', :id => operative.id }, method: :delete %></td>
-        <td><%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  The operative will be reduced to a fine mist. This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
+        <td><%= link_to 'Dispose', operative, method: :delete, data: {confirm: "An explosive device in #{operative.name}'s body will be activated.  This will also destroy all records related to #{operative.name}.  Dispose of #{operative.name}?" } %></td>
       <% end %>
     </tr>
   <% end %>
@@ -56,5 +55,9 @@
     </tr>
 </table>
 
-<%= render "activate_firewall" %>
-<%= render "operatives/activate_operative" %>
+<% if current_user.firewall  > 0 %>
+  <%= render "activate_firewall" %>
+<% end %>
+<% if current_user.firewall  > 0 %>
+  <%= render "operatives/activate_operative" %>
+<% end %>

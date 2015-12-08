@@ -15,9 +15,4 @@ class User < ActiveRecord::Base
   validates :honeypot, numericality: { :greater_than_or_equal_to => 0 }
   validates :o_contract, numericality: { :greater_than_or_equal_to => 0 }
 
-  def self.recontract(op_id)
-    operative = Operative.where(id: op_id)
-    operative.destroy
-    self.o_contract += 1
   end
-end
