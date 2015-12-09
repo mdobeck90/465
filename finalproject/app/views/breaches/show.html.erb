@@ -11,8 +11,12 @@
 </p>
 
 <p>
-  <strong>Recovered Data</strong>
-  <%= User.find(@breach.target_id).password %>
+  <strong>Recovered Assets</strong>
+  $<%= User.find(@breach.target_id).cash %>
+  Z<%= User.find(@breach.target_id).zeroday %>
+  C<%= User.find(@breach.target_id).o_contract %>
+  H<%= User.find(@breach.target_id).honeypot %>
+  F<%= User.find(@breach.target_id).firewall %>
 </p>
 
 <%= link_to 'Edit', edit_breach_path(@breach) %> |
