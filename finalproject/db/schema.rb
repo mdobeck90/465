@@ -17,8 +17,13 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.integer  "user_id"
     t.integer  "target_id"
     t.boolean  "breached"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "z_stolen"
+    t.integer  "honeypot_stolen"
+    t.integer  "firewall_stolen"
+    t.integer  "o_contract_stolen"
+    t.integer  "cash_stolen"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "operatives", force: :cascade do |t|

@@ -17,11 +17,11 @@
 
 <p>
   <strong>Recovered Assets</strong>
-  $<%= @cash_stolen %>
-  Z<%= @z_stolen %>
-  C<%= @o_contract_stolen %>
-  H<%= @honeypot_stolen %>
-  F<%= @firewall_stolen %>
+  $<%= @breach.cash_stolen %>
+  Z<%= @breach.z_stolen %>
+  C<%= @breach.o_contract_stolen %>
+  H<%= @breach.honeypot_stolen %>
+  F<%= @breach.firewall_stolen %>
 </p>
 
 <%= link_to 'Back', breaches_path %>
