@@ -8,24 +8,24 @@
     <td>Skill</td>
     <td>Job</td>
   </tr>
-  <% @operatives.each  do |operative|%>
+  <% @operatives.each  do |cur_operative|%>
     <tr>
-      <td><%= operative.name %></td>
-      <td><%= operative.status %></td>
-      <td><%= operative.skill %></td>
+      <td><%= cur_operative.name %></td>
+      <td><%= cur_operative.status %></td>
+      <td><%= cur_operative.skill %></td>
 
-      <% if operative.status != "deployed" %>
+      <% if cur_operative.status != "deployed" %>
         <td>-</td>
       <% else %>
-        <td><%= operative.job_id %></td>
+        <td><%= cur_operative.job_id %></td>
       <% end %>
       
-      <% if operative.status == "injured" or operative.status == "mia" %>
-        <td><%= link_to 'Dispose', operative, method: :delete,data: {confirm: "Sever all ties and destroy all records of #{operative.name}?" }  %></td>
+      <% if cur_operative.status == "injured" or cur_operative.status == "mia" %>
+        <td><%= link_to 'Dispose', cur_operative, method: :delete,data: {confirm: "Sever all ties and destroy all records of #{cur_operative.name}?" }  %></td>
       <% end %>
       
-      <% if operative.status != "injured" and operative.status != "mia" %>
-        <td><%= link_to 'Fire', operative, method: :delete,data: {confirm: "Release #{operative.name} from contract?" } %></td>
+      <% if cur_operative.status != "injured" and cur_operative.status != "mia" %>
+        <td><%= link_to 'Fire', cur_operative, method: :delete,data: {confirm: "Release #{cur_operative.name} from contract?" } %></td>
       <% end %>
     </tr> 
   <% end %> 
@@ -62,6 +62,6 @@
 <% if current_user.firewall  > 0 %>
   <%= render "activate_firewall" %>
 <% end %>
-<% if current_user.firewall  > 0 %>
+<% if current_user.o_contract  > 0 %>
   <%= render "operatives/activate_operative" %>
 <% end %>

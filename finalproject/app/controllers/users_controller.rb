@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @operatives = current_user.operatives 
+    @operative = current_user.operatives.new
   end
 
   # GET /users/new
@@ -27,11 +28,15 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    for i in 1..4
+      @new_operative = @user.operatives.new
+      @new_operative.generate_operative
+    end
 
     if @user.save
-      item_params = {:user_id => @user.id}
-      @item = Item.new(item_params)
-      @item.save
+      #item_params = {:user_id => @user.id}
+      #@item = Item.new(item_params)
+      #@item.save
       redirect_to @user, notice: 'User was successfully created.'
     else
       render :new 
