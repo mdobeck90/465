@@ -31,10 +31,23 @@ class BreachesController < ApplicationController
   # POST /breaches.json
   def create
     @breach = Breach.new(breach_params)
+    
 
     respond_to do |format|
       if @breach.save
-        format.html { redirect_to @breach, notice: 'Breach was successfully created.' }
+  
+    outcome = @breach.calculate_breach_outcome
+
+    #breached but honeytrap gives lower amount of money and alerts the target
+    if outcome[:honeytrap] == true && outcome[:repel] == true
+      @breach.breached = true
+    elsif outcome[:honeytrap] == false && outcome[:repel] == true
+      @breach.breached = false
+    else
+      @breach.breached = true
+    end
+
+        format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
       else
         format.html { render :new }

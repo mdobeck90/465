@@ -4,8 +4,8 @@ class Breach < ActiveRecord::Base
 
 
   def calculate_breach_outcome
-    honeypot_rating = User.find(self.target_id).active_honeypot + .0
-    defense_rating = User.find(self.target_id).active_firewall + .0
+    honeypot_rating = User.find(self.target_id).active_honeypot 
+    defense_rating = User.find(self.target_id).active_firewall
   
     honey_chance = rand(0.0..honeypot_rating)/honeypot_rating
     defense_chance = rand(0.0..defense_rating)/defense_rating   
@@ -28,5 +28,6 @@ class Breach < ActiveRecord::Base
         @repel = false
       end
     end
+      return {:honeytrap => @honeytrap, :repel => @repel}
   end
 end
