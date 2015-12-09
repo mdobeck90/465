@@ -39,3 +39,15 @@ th, td {
 .item-table-head {
   background-color: #db8aae;
 }
+
+.failed-breaches-th {
+  background-color: #ff0000;
+}
+
+.succ-breaches-th {
+  background-color: #32cc00;
+}
+
+.enemy-breaches-th {
+  background-color: #ffff1a;
+}
