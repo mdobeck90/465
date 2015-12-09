@@ -6,7 +6,7 @@
 <table>
   <thead>
     <tr>
-      <th class="succ-breaches-th">Successfull Breaches</th>
+      <th class="succ-breaches-th">Successful Breaches</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -53,12 +53,32 @@
   <tbody>
     <% @enemy_list.each do |enemy| %>
       <tr>
-        <td><%= enemy.name %> <%= enemy.created_at.strftime("%m-%d-%y") %></td>
+        <% if Breach.find(enemy.id).breached == false %>
+          <td><%= enemy.name %> <%= enemy.created_at.strftime("%m-%d-%y") %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<table>
+  <thead>
+    <tr>
+      <th class="enemy-breaches-th">Successful Enemy Breaches</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enemy_list.each do |enemy| %>
+      <tr>
+        <% if Breach.find(enemy.id).breached == true %>
+          <td><%= enemy.name %> <%= enemy.created_at.strftime("%m-%d-%y") %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 </div
 
