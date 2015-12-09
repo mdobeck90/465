@@ -31,11 +31,9 @@ class BreachesController < ApplicationController
   # POST /breaches.json
   def create
     @breach = Breach.new(breach_params)
+    @breach.user_id = current_user.id
+    @breach.target_id = User.find_by_name(breach_params[:target_id]).id
     
-
-    respond_to do |format|
-      if @breach.save
-  
     outcome = @breach.calculate_breach_outcome
 
     #breached but honeytrap gives lower amount of money and alerts the target
@@ -47,6 +45,9 @@ class BreachesController < ApplicationController
       @breach.breached = true
     end
 
+    respond_to do |format|
+      if @breach.save
+  
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
       else
