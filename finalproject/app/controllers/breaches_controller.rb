@@ -1,4 +1,5 @@
 class BreachesController < ApplicationController
+  include UsersHelper
   before_action :set_breach, only: [:show, :edit, :update, :destroy]
   before_filter :authorize, :except => [:index, :show, :new, :create]
 
@@ -68,6 +69,7 @@ class BreachesController < ApplicationController
 
     respond_to do |format|
       if @breach.save
+        target.steal(@breach)
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
       else
