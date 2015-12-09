@@ -5,6 +5,7 @@ class CreateOperatives < ActiveRecord::Migration
       t.string :name
       t.string :status
       t.integer :skill
+      t.integer :xp
       t.integer :job_id
 
       t.timestamps null: false

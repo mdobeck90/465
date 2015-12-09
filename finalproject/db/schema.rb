@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.string   "name"
     t.string   "status"
     t.integer  "skill"
+    t.integer  "xp"
     t.integer  "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
