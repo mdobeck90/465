@@ -1,5 +1,6 @@
 class BreachesController < ApplicationController
   before_action :set_breach, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, :except => [:index, :show, :new, :create]
 
   # GET /breaches
   # GET /breaches.json

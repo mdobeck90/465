@@ -54,7 +54,7 @@ class OperativesController < ApplicationController
   # DELETE /operatives/1.json
   def destroy
     @operative.destroy
-      redirect_to user_url(@operative.user), notice: 'Operative was successfully destroyed.'
+      redirect_to user_url(@operative.user), notice: '--REDACTED-- was successfully purged from system.'
   end
 
   private

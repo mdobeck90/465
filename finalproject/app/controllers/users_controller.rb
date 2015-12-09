@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       #item_params = {:user_id => @user.id}
       #@item = Item.new(item_params)
       #@item.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to @user, notice: 'Account was successfully created.'
     else
       render :new 
     end
@@ -47,9 +47,9 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'Something was successfull.'
+      redirect_to @user, notice: 'Transaction was successfull.'
     else
-      redirect_to @user
+      redirect_to @user, notice: 'WARNING: Transaction could not be completed.'
     end
   end
 
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'Account was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
