@@ -5,10 +5,9 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
 
 
-  resources :breaches
   resources :users do
+    resources :breaches, :shallow => true
     resources :operatives, :shallow => true
-    resources :items, :shallow => true
   end
 
 
