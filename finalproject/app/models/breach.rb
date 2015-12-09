@@ -7,8 +7,8 @@ class Breach < ActiveRecord::Base
     honeypot_rating = User.find(self.target_id).active_honeypot 
     defense_rating = User.find(self.target_id).active_firewall
   
-    honey_chance = rand(0.0..honeypot_rating)/honeypot_rating
-    defense_chance = rand(0.0..defense_rating)/defense_rating   
+    honey_chance = rand(0.0..honeypot_rating)/(honeypot_rating+2)
+    defense_chance = rand(0.0..defense_rating)/(defense_rating+2)   
     if honey_chance > defense_chance
       @honeytrap = true
     else

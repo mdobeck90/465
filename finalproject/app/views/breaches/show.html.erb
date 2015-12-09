@@ -11,13 +11,17 @@
 </p>
 
 <p>
+  <strong>Breach Successful?</strong>
+  <%= @breach.breached %>
+<p>
+
+<p>
   <strong>Recovered Assets</strong>
-  $<%= User.find(@breach.target_id).cash %>
-  Z<%= User.find(@breach.target_id).zeroday %>
-  C<%= User.find(@breach.target_id).o_contract %>
-  H<%= User.find(@breach.target_id).honeypot %>
-  F<%= User.find(@breach.target_id).firewall %>
+  $<%= @cash_stolen %>
+  Z<%= @z_stolen %>
+  C<%= @o_contract_stolen %>
+  H<%= @honeypot_stolen %>
+  F<%= @firewall_stolen %>
 </p>
 
-<%= link_to 'Edit', edit_breach_path(@breach) %> |
 <%= link_to 'Back', breaches_path %>

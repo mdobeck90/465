@@ -35,14 +35,29 @@ class BreachesController < ApplicationController
     @breach.target_id = User.find_by_name(breach_params[:target_id]).id
     
     outcome = @breach.calculate_breach_outcome
+    target = User.find(@breach.target_id)
 
     #breached but honeytrap gives lower amount of money and alerts the target
     if outcome[:honeytrap] == true && outcome[:repel] == true
+      target.active_honeypot - 1
       @breach.breached = true
+      @cash_stolen = User.find(@breach.target_id).cash * 0.2
+      @z_stolen = 0
+      @honeypot_stolen = 0
+      @firewall_stolen = 0
+      @o_contract_stolen = 0
+    #no breach
     elsif outcome[:honeytrap] == false && outcome[:repel] == true
       @breach.breached = false
+      target.active_firewall - 1
+      target.active_honeypot - 1
+    #plain breach
     else
       @breach.breached = true
+      @z_stolen = rand(0..User.find(@breach.user_id).zeroday)
+      @honeypot_stolen = rand(0..User.find(@breach.user_id).honeypot)
+      @firewall_stolen = rand(0..User.find(@breach.user_id).firewall)
+      @o_contract_stolen = rand(0..User.find(@breach.user_id).o_contract)
     end
 
     respond_to do |format|

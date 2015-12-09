@@ -11,7 +11,7 @@ t = Time.now + 3
 users = User.create(
   [
     { name: 'alice', password: 'a', firewall: 5, honeypot: 2, zeroday: 2 },    
-    { name: 'bob', password: 'b' },    
+    { name: 'bob', password: 'b', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
     { name: 'charlie', password: 'c' },    
     { name: 'david', password: 'd' }    
   ]
