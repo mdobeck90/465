@@ -51,17 +51,28 @@ class BreachesController < ApplicationController
       @breach.breached = false
       target.active_firewall - 1
       target.active_honeypot - 1
+      @cash_stolen = 0
+      @z_stolen = 0
+      @honeypot_stolen = 0
+      @firewall_stolen = 0
+      @o_contract_stolen = 0
     #plain breach
     else
       @breach.breached = true
-      @z_stolen = rand(0..User.find(@breach.user_id).zeroday)
-      @honeypot_stolen = rand(0..User.find(@breach.user_id).honeypot)
-      @firewall_stolen = rand(0..User.find(@breach.user_id).firewall)
-      @o_contract_stolen = rand(0..User.find(@breach.user_id).o_contract)
+      @cash_stolen = rand(0..User.find(@breach.target_id).cash)
+      @z_stolen = rand(0..User.find(@breach.target_id).zeroday)
+      @honeypot_stolen = rand(0..User.find(@breach.target_id).honeypot)
+      @firewall_stolen = rand(0..User.find(@breach.target_id).firewall)
+      @o_contract_stolen = rand(0..User.find(@breach.target_id).o_contract)
     end
 
     respond_to do |format|
       if @breach.save
+        current_user.cash = current_user.cash + @cash_stolen
+        current_user.firewall = current_user.firewall + @firewall_stolen
+        current_user.honeypot = current_user.honeypot + @honeypot_stolen
+        current_user.o_contract = current_user.o_contract + @o_contract_stolen
+        current_user.zeroday = current_user.zeroday + @z_stolen
   
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
