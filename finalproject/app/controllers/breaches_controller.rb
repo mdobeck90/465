@@ -68,11 +68,7 @@ class BreachesController < ApplicationController
 
     respond_to do |format|
       if @breach.save
-        current_user.cash = current_user.cash + @breach.cash_stolen
-        current_user.firewall = current_user.firewall + @breach.firewall_stolen
-        current_user.honeypot = current_user.honeypot + @breach.honeypot_stolen
-        current_user.o_contract = current_user.o_contract + @breach.o_contract_stolen
-        current_user.zeroday = current_user.zeroday + @breach.z_stolen
+        current_user.steal(@breach)  
   
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
