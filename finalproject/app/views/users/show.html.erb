@@ -1,7 +1,6 @@
-<h2>HQ <%= Time.now.strftime("%m/%d %H%M%Z") %> </h2>
-
+<h1><%= current_user.name %>'s assets</h1>
 <table>
-  <caption>Operatives</caption>
+  <caption class="operative-table-head">Operatives</caption>
   <tr>
     <td>Name</td>
     <td>Status</td>
@@ -34,7 +33,7 @@
 </table>
 
 <table>
-  <caption>Items</caption>
+  <caption class="item-table-head">Items</caption>
   <tr>
     <td>Zero-days</td>
     <td>Operative Contracts</td>
@@ -50,7 +49,7 @@
 </table>
 
 <table>
-  <caption>Active Defenses</caption>
+  <caption class="defense-table-head">Active Defenses</caption>
   <tr>
     <td>Firewalls</td>
     <td>Honeypots</td>

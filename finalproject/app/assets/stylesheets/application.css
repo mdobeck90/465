@@ -20,5 +20,22 @@ li {
 
 table {
   display: inline;
+  border-collapse: collapse;
 }
 
+th, td {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  text-align: center;
+}
+
+.operative-table-head {
+  background-color: #ffb044;
+} 
+
+.defense-table-head {
+  background-color: #6699ff;
+}
+.item-table-head {
+  background-color: #db8aae;
+}
