@@ -16,6 +16,7 @@
       <tr>
         <% if breach.breached == true  %>
           <td><%= User.find(breach.target_id).name %> <%= breach.created_at.strftime("%m-%d-%y") %></td>
+          <td><%= link_to 'View Results', breach_url(breach) %></td>
         <% end %>
       </tr>
     <% end %>

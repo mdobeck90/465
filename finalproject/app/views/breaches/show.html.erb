@@ -10,5 +10,10 @@
   <%= @breach.created_at %>
 </p>
 
+<p>
+  <strong>Recovered Data</strong>
+  <%= User.find(@breach.target_id).password %>
+</p>
+
 <%= link_to 'Edit', edit_breach_path(@breach) %> |
 <%= link_to 'Back', breaches_path %>
