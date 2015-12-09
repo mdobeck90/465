@@ -68,3 +68,6 @@
 <% if current_user.o_contract  > 0 %>
   <%= render "operatives/activate_operative" %>
 <% end %>
+<% if current_user.honeypot  > 0 %>
+  <%= render "operatives/activate_honeypot" %>
+<% end %>

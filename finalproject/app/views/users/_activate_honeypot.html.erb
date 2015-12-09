@@ -1,0 +1,21 @@
+<%= form_for(current_user) do |f| %>
+  <% if current_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(current_user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% current_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="hidden-field">
+    <%= f.hidden_field(:honeypot, :value => (current_user.honeypot - 1)) %>
+    <%= f.hidden_field(:active_honeypot, :value => (current_user.active_honeypot + 1)) %>
+  </div> 
+  <div class="actions">
+    <%= f.submit "Activate Honeypot(-1 Honeypot)" %>
+  </div>
+<% end %>
