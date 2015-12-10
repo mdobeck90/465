@@ -17,11 +17,18 @@ class User < ActiveRecord::Base
 
   def check_for_breaches
     #find where cur_user was target of breaches
-    breach_check = Breach.where(target_id: self.id)
+    breaches_by_enemies = Breach.where(target_id: self.id)
   
-    breach_check.each do |breach|
-      if breach.reward_collected == false
+    breaches_by_enemies.each do |breach|
+      if breach.reward_collected != true
+        #if already paid the stolen goods, do nothing
+        puts breach.reward_collected
+        breach.update(reward_collected: true)
+        puts breach.reward_collected
+      else
+        #pay out the stolen goods
       end
+        puts breach.reward_collected
     end
   end
 

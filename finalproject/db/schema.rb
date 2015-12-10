@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.integer  "firewall_stolen"
     t.integer  "o_contract_stolen"
     t.integer  "cash_stolen"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.boolean  "reward_collected",  default: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "operatives", force: :cascade do |t|

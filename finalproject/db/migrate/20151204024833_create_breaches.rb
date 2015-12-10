@@ -9,6 +9,7 @@ class CreateBreaches < ActiveRecord::Migration
       t.integer :firewall_stolen
       t.integer :o_contract_stolen
       t.integer :cash_stolen
+      t.boolean :reward_collected, :default => false
 
       t.timestamps null: false
     end
