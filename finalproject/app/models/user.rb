@@ -16,7 +16,6 @@ class User < ActiveRecord::Base
   validates :o_contract, numericality: { :greater_than_or_equal_to => 0 }
 
   def check_for_breaches
-    puts self
     #find where cur_user was target of breaches
     breaches_by_enemies = Breach.where(target_id: self.id)
   
@@ -24,10 +23,12 @@ class User < ActiveRecord::Base
       #check for new breaches where payout is true
       if breach.reward_collected != true && breach.breached != false
         enemy_breacher = User.find(breach.user_id) 
-        
+        cash_stolen = self.cash - breach.cash_stolen
+        cash_earned = enemy_breacher.cash + breach.cash_stolen
+
         #transact cash
-        puts self.update(cash: self.cash - breach.cash_stolen)
-        puts enemy_breacher.update(cash: (enemy_breacher.cash + breach.cash_stolen))
+        puts self.update(cash: cash_stolen)
+        puts enemy_breacher.update(cash: cash_earned)
 
         #flag this breach as paid out
         breach.update(reward_collected: true)
