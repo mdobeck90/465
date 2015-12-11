@@ -33,7 +33,6 @@ class User < ActiveRecord::Base
         breach.update(reward_collected: true)
       end
     end
-=begin    
     #find where cur_user was target of breaches
     breaches_by_enemies = Breach.where(target_id: self.id)
   
@@ -52,7 +51,6 @@ class User < ActiveRecord::Base
         breach.update(reward_collected: true)
       end
     end
-=end
   end
 
   end

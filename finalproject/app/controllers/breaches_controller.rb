@@ -69,6 +69,7 @@ class BreachesController < ApplicationController
 
     respond_to do |format|
       if @breach.save
+        current_user.check_for_breaches
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
       else
