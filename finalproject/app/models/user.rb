@@ -26,14 +26,14 @@ class User < ActiveRecord::Base
         cash_earned = breacher.cash + breach.cash_stolen
 
         #transact cash
-        puts self.update(cash: cash_taken)
-        puts breacher.update(cash: cash_earned)
+        User.find(breach.target_id).update(cash: cash_taken)
+        breacher.update(cash: cash_earned)
 
         #flag this breach as paid out
         breach.update(reward_collected: true)
       end
     end
-    
+=begin    
     #find where cur_user was target of breaches
     breaches_by_enemies = Breach.where(target_id: self.id)
   
@@ -52,6 +52,7 @@ class User < ActiveRecord::Base
         breach.update(reward_collected: true)
       end
     end
+=end
   end
 
   end

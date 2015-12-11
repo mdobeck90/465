@@ -21,7 +21,7 @@ breaches = Breach.create(
   [
     #alice is targeting bob OR bob is targeted by alice
     {user_id: 1, target_id: 2, breached: false},
-    {user_id: 1, target_id: 3, breached: true},
+    {user_id: 1, target_id: 3, breached: true, cash_stolen: 1000},
     {user_id: 1, target_id: 2, breached: false},
 
     {user_id: 2, target_id: 1, breached: false},
