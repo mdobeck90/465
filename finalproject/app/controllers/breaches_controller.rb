@@ -60,7 +60,7 @@ class BreachesController < ApplicationController
     #plain breach
     else
       @breach.breached = true
-      @breach.cash_stolen = rand(0..User.find(@breach.target_id).cash) * 0.8
+      @breach.cash_stolen = @breach.target_id.cash * 0.8
       @breach.z_stolen = rand(0..User.find(@breach.target_id).zeroday)
       @breach.honeypot_stolen = rand(0..User.find(@breach.target_id).honeypot)
       @breach.firewall_stolen = rand(0..User.find(@breach.target_id).firewall)
