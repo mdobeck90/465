@@ -69,7 +69,6 @@ class BreachesController < ApplicationController
 
     respond_to do |format|
       if @breach.save
-        target.steal(@breach)
         format.html { redirect_to @breach, notice: 'Breach completed.' }
         format.json { render :show, status: :created, location: @breach }
       else
