@@ -11,7 +11,7 @@ class Operative < ActiveRecord::Base
   end
 
   def check_job_status
-    if self.return_time != nil && self.return_time >= Time.now
+    if self.return_time != nil && self.return_time.in_time_zone("UTC") >= Time.now.in_time_zone("UTC")
       self.job_id = nil
       self.return_time = nil
     end

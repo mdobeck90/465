@@ -37,15 +37,15 @@ breaches = Breach.create(
 operatives = Operative.create(
   [
     { user_id: 1, name: 'Smiling Gibbon', status: 'deployed', skill: 7, job_id: nil, return_time: t },
-    { user_id: 1, name: 'Sitting Tofu', status: 'injured', skill: 4, job_id: nil },
-    { user_id: 1, name: 'Fuze', status: 'injured', skill: 4, job_id: nil, return_time: t },
-    { user_id: 1, name: 'Black Swan', status: 'mia', skill: 3, job_id: nil, return_time: t },
+    { user_id: 1, name: 'Sitting Tofu', status: 'idle', skill: 4, job_id: nil },
+    { user_id: 1, name: 'Fuze', status: 'deployed', skill: 4, job_id: nil, return_time: t },
+    { user_id: 1, name: 'Black Swan', status: 'deployed', skill: 3, job_id: nil, return_time: t },
     { user_id: 1, name: 'Golden Jackrabbit', status: 'idle', skill: 6, job_id: nil },
 
-    { user_id: 2, name: 'Daft Adder', status: 'injured', skill: 6, job_id: nil },
-    { user_id: 2, name: 'Stale Hammer', status: 'deployed', skill: 2, job_id: nil },
-    { user_id: 2, name: 'Orange Rocket', status: 'deployed', skill: 3, job_id: nil },
-    { user_id: 2, name: 'Steel Sun', status: 'deployed', skill: 4, job_id: nil },
+    { user_id: 2, name: 'Daft Adder', status: 'idle', skill: 6, job_id: nil },
+    { user_id: 2, name: 'Stale Hammer', status: 'idle', skill: 2, job_id: nil },
+    { user_id: 2, name: 'Orange Rocket', status: 'idle', skill: 3, job_id: nil },
+    { user_id: 2, name: 'Steel Sun', status: 'deployed', skill: 4, job_id: t },
 
     { user_id: 4, name: 'Yoga', status: 'deployed', skill: 1, job_id: nil },
     { user_id: 4, name: 'Cunning Turtle', status: 'deployed', skill: 1, job_id: nil },

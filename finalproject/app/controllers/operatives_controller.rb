@@ -8,6 +8,9 @@ class OperativesController < ApplicationController
   # GET /operatives.json
   def index
     @operatives = current_user.operatives
+    @operatives.each do |operative|
+      operative.check_job_status
+    end
   end
 
   # GET /operatives/1
