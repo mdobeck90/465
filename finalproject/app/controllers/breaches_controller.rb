@@ -6,6 +6,7 @@ class BreachesController < ApplicationController
   # GET /breaches
   # GET /breaches.json
   def index
+    @rand_user = User.all.sample
     @breaches = Breach.where(user_id: current_user.id)
     enemy_failed_breaches = Breach.where(target_id: current_user.id)
     @enemy_list = Array.new

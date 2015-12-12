@@ -16,8 +16,7 @@
       <tr>
         <% if breach.breached == true  %>
           <td><%= User.find(breach.target_id).name %> <%= breach.created_at.strftime("%m-%d-%y") %></td>
-          <td><%= link_to 'View Results', breach_url(breach) %></td>
-        <% end %>
+          <td><%= link_to 'View Results', breach_url(breach) %></td> <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -89,11 +88,9 @@
   </thead>
 
   <tbody>
-      <tr>
-        <%= for i in 0..current_user.zeroday %>
-          <%= User.find(id:rand(1..User.last.id).name %>
-        <% end %>
-      </tr>
+      <td>
+        <%= @rand_user.name %>
+      </td>
   </tbody>
 </table>
 
