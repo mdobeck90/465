@@ -8,7 +8,7 @@
 </head>
 <body>
 <strong><%= current_user.name %> <%=number_to_currency(current_user.cash, precision: 0) %></strong> 
-<strong> <%= Time.now.strftime("%m/%d %H%M%Z") %> </strong>
+<strong> <%= Time.now.in_time_zone("UTC").strftime("%m/%d %H%M%Z") %> </strong>
 <%= link_to 'log out', logout_path %> | 
 <%= link_to 'edit account', edit_user_path(current_user) %>
 <p id="notice"><%= notice %></p>
