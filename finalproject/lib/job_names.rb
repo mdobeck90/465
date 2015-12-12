@@ -39,6 +39,14 @@ def job_names
 'moose',
 'caboose',
 'anvil',
-'blacksmith'  
+'blacksmith',  
+'black eye',
+'brown nose',
+'hell raiser',
+'muffintop',
+'iron eagle',
+'salamander',
+'recovery',
+'false idol'
 ]
 end
