@@ -1,0 +1,404 @@
+jobs = Job.create(
+    [
+name: papa, payout: 640, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 46, xp: 68 
+name: gibbon, payout: 1639, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 167, xp: 79 
+name: victor, payout: 1959, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 128, xp: 5 
+name: goat cheese, payout: 977, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 59, xp: 33 
+name: hurricane, payout: 241, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 120, xp: 87 
+name: vigo, payout: 1755, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 55, xp: 77 
+name: blowback, payout: 1514, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 50, xp: 4 
+name: applesauce, payout: 1756, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 132, xp: 66 
+name: bravo, payout: 1376, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 103, xp: 18 
+name: coldcuts, payout: 1105, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 42, xp: 96 
+name: quarantine, payout: 860, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 172, xp: 53 
+name: vigo, payout: 1337, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 86, xp: 35 
+name: hackathon, payout: 1981, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 89, xp: 17 
+name: quarantine, payout: 1533, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 128, xp: 49 
+name: loose goose, payout: 942, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 40, xp: 93 
+name: richard, payout: 494, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 172, xp: 26 
+name: shutdown, payout: 684, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 146, xp: 100 
+name: purple donkey, payout: 1840, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 128, xp: 55 
+name: gale, payout: 595, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 72, xp: 59 
+name: half a beer, payout: 1934, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 169, xp: 35 
+name: typhoon, payout: 372, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 49, xp: 49 
+name: jaba, payout: 914, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 33, xp: 12 
+name: quarantine, payout: 1323, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 135, xp: 26 
+name: moose, payout: 585, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 86, xp: 67 
+name: backdraft, payout: 396, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 148, xp: 90 
+name: fat man, payout: 1473, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 106, xp: 2 
+name: purple donkey, payout: 675, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 39, xp: 80 
+name: hell raiser, payout: 514, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 48, xp: 64 
+name: jam out clam out, payout: 1237, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 38, xp: 5 
+name: backdraft, payout: 1349, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 108, xp: 29 
+name: recovery, payout: 1974, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 30, xp: 15 
+name: gibbon, payout: 594, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 104, xp: 10 
+name: top gun, payout: 1473, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 74, xp: 11 
+name: black hawk, payout: 841, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 170, xp: 97 
+name: embedded, payout: 1984, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 145, xp: 42 
+name: purple donkey, payout: 678, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 111, xp: 25 
+name: salamander, payout: 975, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 64, xp: 9 
+name: thunder****, payout: 1945, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 164, xp: 87 
+name: bluejay, payout: 1280, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 57, xp: 62 
+name: papa, payout: 1246, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 70, xp: 21 
+name: victor, payout: 1623, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 90, xp: 82 
+name: gibbon, payout: 921, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 164, xp: 67 
+name: salamander, payout: 302, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 121, xp: 79 
+name: chico, payout: 1611, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 104, xp: 50 
+name: vigo, payout: 1589, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 34, xp: 95 
+name: hurricane, payout: 854, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 160, xp: 42 
+name: recovery, payout: 927, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 115, xp: 6 
+name: black eye, payout: 1642, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 58, xp: 21 
+name: moose, payout: 410, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 107, xp: 52 
+name: whateverthefuck, payout: 1099, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 74, xp: 27 
+name: brown nose, payout: 1045, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 134, xp: 45 
+name: alpha, payout: 1842, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 171, xp: 22 
+name: firesail, payout: 406, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 97, xp: 4 
+name: blowback, payout: 937, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 36, xp: 22 
+name: caboose, payout: 1803, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 142, xp: 24 
+name: gibbon, payout: 1587, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 157, xp: 68 
+name: salamander, payout: 164, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 80, xp: 41 
+name: second coming, payout: 1698, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 36, xp: 64 
+name: muffintop, payout: 553, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 79, xp: 74 
+name: hellraiser, payout: 1596, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 95, xp: 17 
+name: fat man, payout: 391, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 38, xp: 22 
+name: jaba, payout: 34, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 31, xp: 60 
+name: hellraiser, payout: 835, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 104, xp: 70 
+name: turtle, payout: 409, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 180, xp: 64 
+name: smokescreen, payout: 833, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 112, xp: 70 
+name: sherpa, payout: 1454, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 127, xp: 36 
+name: f.o.b., payout: 1646, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 165, xp: 34 
+name: smokescreen, payout: 452, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 177, xp: 74 
+name: victor, payout: 1260, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 118, xp: 53 
+name: gibbon, payout: 557, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 104, xp: 59 
+name: hellraiser, payout: 173, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 113, xp: 60 
+name: bern-inator, payout: 1524, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 47, xp: 13 
+name: papa, payout: 1465, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 59, xp: 61 
+name: moose, payout: 1469, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 125, xp: 13 
+name: hackathon, payout: 508, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 105, xp: 37 
+name: jaba, payout: 264, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 158, xp: 60 
+name: smokescreen, payout: 897, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 160, xp: 95 
+name: quarantine, payout: 1209, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 91, xp: 40 
+name: consumnes, payout: 1876, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 39, xp: 74 
+name: consumnes, payout: 177, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 117, xp: 26 
+name: second coming, payout: 1083, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 117, xp: 58 
+name: purple donkey, payout: 120, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 86, xp: 61 
+name: thunder****, payout: 1137, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 61, xp: 86 
+name: trump-inator, payout: 1963, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 66, xp: 26 
+name: brown nose, payout: 927, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 92, xp: 7 
+name: consumnes, payout: 189, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 109, xp: 65 
+name: breach, payout: 1735, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 154, xp: 98 
+name: recovery, payout: 609, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 33, xp: 92 
+name: papa, payout: 675, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 174, xp: 50 
+name: fat man, payout: 1636, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 35, xp: 92 
+name: papa, payout: 1763, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 128, xp: 65 
+name: tango, payout: 1049, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 173, xp: 30 
+name: backdraft, payout: 957, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 87, xp: 68 
+name: wtf, payout: 1629, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 45, xp: 69 
+name: hell raiser, payout: 1872, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 162, xp: 80 
+name: jaba, payout: 836, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 104, xp: 3 
+name: fat man, payout: 1500, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 99, xp: 20 
+name: black hawk, payout: 975, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 49, xp: 3 
+name: trump-inator, payout: 1790, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 34, xp: 20 
+name: brown nose, payout: 905, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 107, xp: 13 
+name: second coming, payout: 1102, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 164, xp: 67 
+name: smokescreen, payout: 1493, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 165, xp: 42 
+name: consumnes, payout: 1235, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 173, xp: 7 
+name: half a beer, payout: 684, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 108, xp: 78 
+name: second coming, payout: 1093, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 65, xp: 90 
+name: consumnes, payout: 1915, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 160, xp: 37 
+name: bannana? bannanna?, payout: 596, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 139, xp: 52 
+name: little boy, payout: 478, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 131, xp: 33 
+name: richard, payout: 323, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 167, xp: 0 
+name: wtf, payout: 1603, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 170, xp: 97 
+name: coldcuts, payout: 1937, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 99, xp: 38 
+name: little boy, payout: 1143, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 146, xp: 28 
+name: smokescreen, payout: 792, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 116, xp: 23 
+name: applesauce, payout: 1356, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 95, xp: 31 
+name: cheney, payout: 492, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 51, xp: 9 
+name: blowback, payout: 20, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 114, xp: 84 
+name: brown nose, payout: 1134, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 96, xp: 83 
+name: false idol, payout: 637, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 50, xp: 47 
+name: brown nose, payout: 578, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 95, xp: 55 
+name: cheney, payout: 329, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 150, xp: 88 
+name: jaba, payout: 783, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 179, xp: 33 
+name: chico, payout: 172, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 170, xp: 35 
+name: trump-inator, payout: 861, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 114, xp: 73 
+name: snake eater, payout: 734, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 47, xp: 29 
+name: goat cheese, payout: 922, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 47, xp: 90 
+name: backdraft, payout: 1946, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 143, xp: 60 
+name: chico, payout: 1999, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 163, xp: 69 
+name: f.o.b., payout: 299, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 143, xp: 42 
+name: hell raiser, payout: 163, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 45, xp: 27 
+name: blowback, payout: 1231, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 46, xp: 24 
+name: chico, payout: 278, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 127, xp: 59 
+name: second coming, payout: 1553, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 63, xp: 81 
+name: bannana? bannanna?, payout: 781, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 64, xp: 95 
+name: hackathon, payout: 1075, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 42, xp: 87 
+name: papa, payout: 1162, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 43, xp: 21 
+name: typhoon, payout: 990, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 164, xp: 84 
+name: half a beer, payout: 1925, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 60, xp: 15 
+name: backdraft, payout: 65, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 169, xp: 30 
+name: jam out clam out, payout: 1220, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 178, xp: 62 
+name: whateverthefuck, payout: 1920, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 171, xp: 54 
+name: coldcuts, payout: 898, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 65, xp: 1 
+name: turkey, payout: 1924, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 118, xp: 54 
+name: tango, payout: 215, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 77, xp: 71 
+name: fat man, payout: 257, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 158, xp: 16 
+name: hellraiser, payout: 698, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 129, xp: 34 
+name: little boy, payout: 451, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 167, xp: 51 
+name: recovery, payout: 1296, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 113, xp: 10 
+name: f.o.b., payout: 278, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 172, xp: 41 
+name: consumnes, payout: 796, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 124, xp: 83 
+name: trump-inator, payout: 1900, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 37, xp: 47 
+name: dustoff, payout: 696, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 39, xp: 22 
+name: bannana? bannanna?, payout: 679, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 34, xp: 48 
+name: wtf, payout: 49, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 55, xp: 1 
+name: salamander, payout: 381, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 129, xp: 37 
+name: caboose, payout: 1571, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 122, xp: 41 
+name: recovery, payout: 165, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 100, xp: 61 
+name: false idol, payout: 1113, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 79, xp: 58 
+name: blacksmith, payout: 735, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 131, xp: 25 
+name: victor, payout: 1187, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 106, xp: 6 
+name: top gun, payout: 1969, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 72, xp: 87 
+name: iron eagle, payout: 447, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 85, xp: 43 
+name: tango, payout: 1941, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 80, xp: 65 
+name: false idol, payout: 1346, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 81, xp: 89 
+name: fat man, payout: 43, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 122, xp: 89 
+name: gale, payout: 233, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 103, xp: 33 
+name: blowback, payout: 1681, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 51, xp: 82 
+name: tango, payout: 180, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 173, xp: 41 
+name: bluejay, payout: 261, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 171, xp: 39 
+name: recovery, payout: 1028, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 93, xp: 18 
+name: black hawk, payout: 1953, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 54, xp: 10 
+name: jaba, payout: 1595, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 150, xp: 95 
+name: thunder****, payout: 126, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 65, xp: 68 
+name: turkey, payout: 668, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 65, xp: 28 
+name: black eye, payout: 874, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 134, xp: 68 
+name: black hawk, payout: 684, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 111, xp: 41 
+name: victor, payout: 915, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 30, xp: 100 
+name: whateverthefuck, payout: 343, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 51, xp: 18 
+name: salamander, payout: 572, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 58, xp: 32 
+name: top gun, payout: 1129, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 35, xp: 99 
+name: smokescreen, payout: 1572, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 172, xp: 3 
+name: snake eater, payout: 346, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 96, xp: 32 
+name: turkey, payout: 358, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 160, xp: 53 
+name: vigo, payout: 1720, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 164, xp: 23 
+name: embedded, payout: 1359, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 113, xp: 89 
+name: alpha, payout: 335, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 105, xp: 94 
+name: muffintop, payout: 1200, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 161, xp: 22 
+name: anvil, payout: 535, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 76, xp: 22 
+name: hurricane, payout: 748, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 92, xp: 95 
+name: thunder****, payout: 1275, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 100, xp: 33 
+name: wtf, payout: 848, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 66, xp: 18 
+name: fat man, payout: 225, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 66, xp: 94 
+name: alpha, payout: 628, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 166, xp: 74 
+name: gibbon, payout: 113, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 149, xp: 78 
+name: consumnes, payout: 186, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 31, xp: 32 
+name: f.o.b., payout: 937, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 95, xp: 3 
+name: hackathon, payout: 1153, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 70, xp: 74 
+name: little boy, payout: 1882, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 162, xp: 75 
+name: smokescreen, payout: 1976, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 114, xp: 26 
+name: brown nose, payout: 1229, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 160, xp: 90 
+name: purple donkey, payout: 1107, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 71, xp: 12 
+name: bern-inator, payout: 357, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 61, xp: 16 
+name: embedded, payout: 582, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 162, xp: 75 
+name: whateverthefuck, payout: 271, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 38, xp: 35 
+name: fang, payout: 981, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 41, xp: 48 
+name: quarantine, payout: 1305, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 121, xp: 55 
+name: trump-inator, payout: 957, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 152, xp: 67 
+name: jaba, payout: 666, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 125, xp: 53 
+name: hell raiser, payout: 233, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 71, xp: 71 
+name: turkey, payout: 948, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 118, xp: 57 
+name: muffintop, payout: 1769, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 39, xp: 43 
+name: f.o.b., payout: 967, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 57, xp: 7 
+name: smokescreen, payout: 1196, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 146, xp: 40 
+name: applesauce, payout: 1836, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 149, xp: 80 
+name: salamander, payout: 1219, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 108, xp: 82 
+name: fat man, payout: 820, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 177, xp: 84 
+name: muffintop, payout: 196, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 137, xp: 20 
+name: hellraiser, payout: 43, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 75, xp: 63 
+name: blacksmith, payout: 1147, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 50, xp: 90 
+name: backdraft, payout: 681, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 49, xp: 55 
+name: black eye, payout: 1385, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 38, xp: 14 
+name: victor, payout: 1969, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 147, xp: 37 
+name: blowback, payout: 1977, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 94, xp: 35 
+name: fat man, payout: 1394, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 41, xp: 38 
+name: applesauce, payout: 771, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 72, xp: 61 
+name: richard, payout: 1283, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 179, xp: 82 
+name: smokescreen, payout: 923, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 88, xp: 92 
+name: cheney, payout: 727, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 130, xp: 75 
+name: gale, payout: 636, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 150, xp: 97 
+name: salamander, payout: 1744, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 96, xp: 44 
+name: consumnes, payout: 30, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 94, xp: 36 
+name: hellraiser, payout: 787, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 117, xp: 10 
+name: black eye, payout: 787, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 134, xp: 77 
+name: smokescreen, payout: 381, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 139, xp: 0 
+name: brown nose, payout: 1087, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 55, xp: 51 
+name: jaba, payout: 1441, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 132, xp: 66 
+name: salamander, payout: 529, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 102, xp: 21 
+name: embedded, payout: 472, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 39, xp: 69 
+name: consumnes, payout: 856, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 101, xp: 3 
+name: hell raiser, payout: 1570, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 59, xp: 18 
+name: jam out clam out, payout: 1902, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 167, xp: 0 
+name: jam out clam out, payout: 1935, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 138, xp: 40 
+name: snake eater, payout: 1036, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 119, xp: 8 
+name: blowback, payout: 1297, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 135, xp: 75 
+name: gibbon, payout: 466, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 66, xp: 62 
+name: vigo, payout: 1382, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 134, xp: 69 
+name: caboose, payout: 1689, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 118, xp: 2 
+name: hackathon, payout: 412, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 73, xp: 65 
+name: loose goose, payout: 618, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 123, xp: 90 
+name: shutdown, payout: 1324, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 89, xp: 84 
+name: breach, payout: 816, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 92, xp: 100 
+name: trump-inator, payout: 831, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 30, xp: 72 
+name: blacksmith, payout: 566, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 49, xp: 9 
+name: hackathon, payout: 421, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 83, xp: 26 
+name: shutdown, payout: 1388, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 30, xp: 28 
+name: hurricane, payout: 1628, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 65, xp: 53 
+name: goat cheese, payout: 826, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 59, xp: 5 
+name: hurricane, payout: 547, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 43, xp: 97 
+name: bluejay, payout: 1004, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 47, xp: 90 
+name: bluejay, payout: 1905, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 168, xp: 23 
+name: trump-inator, payout: 1588, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 135, xp: 2 
+name: jam out clam out, payout: 302, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 121, xp: 32 
+name: chico, payout: 865, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 121, xp: 80 
+name: alpha, payout: 1240, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 141, xp: 13 
+name: dustoff, payout: 1747, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 35, xp: 42 
+name: coldcuts, payout: 1396, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 178, xp: 21 
+name: blacksmith, payout: 887, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 118, xp: 87 
+name: victor, payout: 1019, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 124, xp: 70 
+name: blowback, payout: 127, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 58, xp: 24 
+name: gale, payout: 774, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 124, xp: 44 
+name: baboon, payout: 1332, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 96, xp: 46 
+name: hellraiser, payout: 725, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 53, xp: 25 
+name: baboon, payout: 1018, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 44, xp: 48 
+name: false idol, payout: 1709, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 88, xp: 32 
+name: purple donkey, payout: 1091, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 101, xp: 57 
+name: snake eater, payout: 1445, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 175, xp: 52 
+name: chico, payout: 784, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 109, xp: 100 
+name: muffintop, payout: 313, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 115, xp: 48 
+name: richard, payout: 191, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 155, xp: 73 
+name: black hawk, payout: 833, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 83, xp: 66 
+name: bravo, payout: 1897, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 50, xp: 10 
+name: false idol, payout: 605, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 130, xp: 85 
+name: recovery, payout: 1739, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 47, xp: 19 
+name: purple donkey, payout: 1176, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 158, xp: 28 
+name: smokescreen, payout: 621, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 33, xp: 20 
+name: bannana? bannanna?, payout: 407, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 116, xp: 62 
+name: breach, payout: 473, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 32, xp: 4 
+name: victor, payout: 209, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 116, xp: 23 
+name: wtf, payout: 1786, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 119, xp: 20 
+name: fat man, payout: 302, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 169, xp: 56 
+name: firesail, payout: 619, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 89, xp: 37 
+name: black hawk, payout: 346, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 165, xp: 20 
+name: purple donkey, payout: 1586, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 52, xp: 24 
+name: purple donkey, payout: 1188, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 85, xp: 9 
+name: backdraft, payout: 1694, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 167, xp: 8 
+name: bannana? bannanna?, payout: 331, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 136, xp: 24 
+name: papa, payout: 487, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 87, xp: 10 
+name: coldcuts, payout: 456, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 123, xp: 27 
+name: cheney, payout: 873, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 45, xp: 43 
+name: juicy, payout: 661, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 156, xp: 37 
+name: gale, payout: 1770, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 37, xp: 60 
+name: half a beer, payout: 1071, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 42, xp: 49 
+name: hardball, payout: 1117, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 47, xp: 87 
+name: half a beer, payout: 1386, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 38, xp: 39 
+name: papa, payout: 901, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 85, xp: 6 
+name: thunder****, payout: 99, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 47, xp: 9 
+name: moose, payout: 566, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 74, xp: 69 
+name: fang, payout: 1345, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 177, xp: 23 
+name: hardball, payout: 1518, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 132, xp: 44 
+name: muffintop, payout: 1257, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 86, xp: 27 
+name: breach, payout: 1252, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 75, xp: 90 
+name: dustoff, payout: 375, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 106, xp: 0 
+name: blowback, payout: 329, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 68, xp: 11 
+name: breach, payout: 344, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 135, xp: 12 
+name: whateverthefuck, payout: 395, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 36, xp: 65 
+name: vigo, payout: 546, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 47, xp: 59 
+name: chico, payout: 338, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 117, xp: 28 
+name: hell raiser, payout: 1765, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 151, xp: 70 
+name: typhoon, payout: 1014, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 171, xp: 38 
+name: shutdown, payout: 1127, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 58, xp: 100 
+name: recovery, payout: 521, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 162, xp: 34 
+name: snake eater, payout: 921, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 100, xp: 81 
+name: juicy, payout: 105, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 64, xp: 69 
+name: little boy, payout: 1507, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 85, xp: 66 
+name: alpha, payout: 500, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 73, xp: 72 
+name: backdraft, payout: 601, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 53, xp: 44 
+name: alpha, payout: 1588, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 105, xp: 93 
+name: whateverthefuck, payout: 293, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 54, xp: 1 
+name: hurricane, payout: 602, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 133, xp: 24 
+name: chico, payout: 269, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 73, xp: 82 
+name: gibbon, payout: 858, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 39, xp: 26 
+name: black hawk, payout: 1035, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 164, xp: 98 
+name: purple donkey, payout: 1627, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 66, xp: 23 
+name: purple donkey, payout: 1486, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 151, xp: 34 
+name: moose, payout: 747, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 138, xp: 87 
+name: victor, payout: 1023, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 68, xp: 42 
+name: recovery, payout: 1291, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 142, xp: 75 
+name: black hawk, payout: 376, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 37, xp: 85 
+name: black hawk, payout: 1321, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 97, xp: 14 
+name: typhoon, payout: 1439, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 104, xp: 4 
+name: firesail, payout: 1198, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 134, xp: 27 
+name: recovery, payout: 419, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 68, xp: 7 
+name: firesail, payout: 1007, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 105, xp: 79 
+name: brown nose, payout: 1471, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 82, xp: 95 
+name: typhoon, payout: 220, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 45, xp: 95 
+name: papa, payout: 886, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 54, xp: 26 
+name: brown nose, payout: 1216, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 64, xp: 59 
+name: shutdown, payout: 1434, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 115, xp: 76 
+name: f.o.b., payout: 525, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 175, xp: 93 
+name: gale, payout: 1622, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 141, xp: 27 
+name: anvil, payout: 1798, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 88, xp: 57 
+name: false idol, payout: 764, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 108, xp: 100 
+name: hellraiser, payout: 1416, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 156, xp: 86 
+name: muffintop, payout: 1673, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 171, xp: 76 
+name: consumnes, payout: 40, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 129, xp: 2 
+name: backdraft, payout: 403, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 92, xp: 62 
+name: applesauce, payout: 1325, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 62, xp: 75 
+name: second coming, payout: 1533, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 41, xp: 50 
+name: whateverthefuck, payout: 1237, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 141, xp: 52 
+name: purple donkey, payout: 1259, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 151, xp: 76 
+name: iron eagle, payout: 459, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 45, xp: 13 
+name: taco, payout: 277, reward: 'Placeholder Item', difficulty: 7, description: 'Placeholder Description', time_to_complete: 83, xp: 2 
+name: salamander, payout: 164, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 90, xp: 78 
+name: typhoon, payout: 195, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 143, xp: 17 
+name: sherpa, payout: 1012, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 86, xp: 82 
+name: salamander, payout: 875, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 162, xp: 99 
+name: fat man, payout: 745, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 83, xp: 85 
+name: salamander, payout: 1806, reward: 'Placeholder Item', difficulty: 9, description: 'Placeholder Description', time_to_complete: 143, xp: 50 
+name: muffintop, payout: 1395, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 37, xp: 96 
+name: coldcuts, payout: 809, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 176, xp: 61 
+name: goat cheese, payout: 128, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 67, xp: 44 
+name: quarantine, payout: 1430, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 65, xp: 94 
+name: victor, payout: 1058, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 133, xp: 94 
+name: coldcuts, payout: 1371, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 168, xp: 86 
+name: gibbon, payout: 952, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 60, xp: 97 
+name: embedded, payout: 1060, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 102, xp: 18 
+name: dustoff, payout: 957, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 76, xp: 12 
+name: blacksmith, payout: 747, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 53, xp: 66 
+name: consumnes, payout: 790, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 106, xp: 91 
+name: second coming, payout: 1550, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 30, xp: 33 
+name: muffintop, payout: 1817, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 84, xp: 1 
+name: black hawk, payout: 850, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 169, xp: 94 
+name: hackathon, payout: 1232, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 158, xp: 68 
+name: goat cheese, payout: 696, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 165, xp: 28 
+name: papa, payout: 218, reward: 'Placeholder Item', difficulty: 5, description: 'Placeholder Description', time_to_complete: 111, xp: 23 
+name: snake eater, payout: 1875, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 101, xp: 83 
+name: applesauce, payout: 1829, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 39, xp: 66 
+name: chico, payout: 539, reward: 'Placeholder Item', difficulty: 1, description: 'Placeholder Description', time_to_complete: 82, xp: 40 
+name: breach, payout: 937, reward: 'Placeholder Item', difficulty: 11, description: 'Placeholder Description', time_to_complete: 178, xp: 39 
+name: black hawk, payout: 1233, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 82, xp: 52 
+name: richard, payout: 1531, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 90, xp: 49 
+name: jam out clam out, payout: 1370, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 50, xp: 58 
+name: alpha, payout: 1780, reward: 'Placeholder Item', difficulty: 2, description: 'Placeholder Description', time_to_complete: 171, xp: 74 
+name: iron eagle, payout: 203, reward: 'Placeholder Item', difficulty: 3, description: 'Placeholder Description', time_to_complete: 91, xp: 8 
+name: brown nose, payout: 120, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 127, xp: 16 
+name: jaba, payout: 718, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 154, xp: 23 
+name: richard, payout: 1661, reward: 'Placeholder Item', difficulty: 8, description: 'Placeholder Description', time_to_complete: 55, xp: 28 
+name: thunder****, payout: 1837, reward: 'Placeholder Item', difficulty: 6, description: 'Placeholder Description', time_to_complete: 106, xp: 12 
+name: fat man, payout: 1710, reward: 'Placeholder Item', difficulty: 10, description: 'Placeholder Description', time_to_complete: 170, xp: 92 
+name: second coming, payout: 1470, reward: 'Placeholder Item', difficulty: 12, description: 'Placeholder Description', time_to_complete: 137, xp: 1 
+name: turtle, payout: 1130, reward: 'Placeholder Item', difficulty: 4, description: 'Placeholder Description', time_to_complete: 109, xp: 8 
+]
+    )

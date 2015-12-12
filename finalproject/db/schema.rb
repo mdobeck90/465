@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204224325) do
+ActiveRecord::Schema.define(version: 20151212002948) do
 
   create_table "breaches", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 20151204224325) do
     t.boolean  "reward_collected",  default: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "payout"
+    t.string   "reward"
+    t.integer  "difficulty"
+    t.string   "description"
+    t.integer  "time_to_complete"
+    t.integer  "xp"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "operatives", force: :cascade do |t|
