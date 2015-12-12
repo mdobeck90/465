@@ -25,13 +25,7 @@
         <td><%= job.description %></td>
         <td><%= job.time_to_complete %></td>
         <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Job', new_job_path %>

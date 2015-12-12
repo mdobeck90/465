@@ -30,5 +30,23 @@
   <%= @job.time_to_complete %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
+<table>
+  <caption class="operative-table-head">Operatives</caption>
+  <tr>
+    <td>Name</td>
+    <td>Skill</td>
+    <td>XP to Skill Up</td>
+  </tr>
+  <% @operatives.each  do |cur_operative|%>
+    <tr>
+      <% if cur_operative.status == 'idle'  && !cur_operative.new_record? %>
+        <td><%= cur_operative.name %></td>
+        <td><%= cur_operative.skill %></td>
+        <td><%= cur_operative.xp %></td>
+      <% end %>
+    </tr> 
+    <% end %>
+  <% end %> 
+</table>
+
 <%= link_to 'Back', jobs_path %>
