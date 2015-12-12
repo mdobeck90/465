@@ -22,7 +22,7 @@
 
 <p>
   <strong>Deployment time:</strong>
-  <%= @operative.deployment_time %>
+  <%= @operative.return_time %>
 </p>
 
 <p>
@@ -30,5 +30,4 @@
   <%= @operative.job_id %>
 </p>
 
-<%= link_to 'Edit', edit_operative_path(@operative) %> |
-<%= link_to 'Back', operatives_path %>
+<%= link_to 'Back', user_path(current_user) %>

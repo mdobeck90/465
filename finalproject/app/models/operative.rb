@@ -4,6 +4,10 @@ class Operative < ActiveRecord::Base
 
   belongs_to :user
 
+  def assign_job(assigned_job_id)
+    self.update(job_id: assigned_job_id)
+  end
+
   def check_deployment_time 
     if self.deployment_time != nil
       if self.deployment_time >= Time.now

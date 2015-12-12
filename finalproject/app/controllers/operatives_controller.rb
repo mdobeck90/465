@@ -39,10 +39,13 @@ class OperativesController < ApplicationController
   # PATCH/PUT /operatives/1
   # PATCH/PUT /operatives/1.json
   def update
+    @user = User.find(@operative.user_id) 
+    @operative.assign_job(params[:job_id]) 
+    
     respond_to do |format|
       if @operative.update(operative_params)
-        format.html { redirect_to @operative, notice: 'Operative was successfully updated.' }
-        format.json { render :show, status: :ok, location: @operative }
+        format.html { redirect_to user_url(@user), notice: 'Operative was successfully updated.' }
+        format.json { render :show, status: :ok, location: user_url(@user) }
       else
         format.html { render :edit }
         format.json { render json: @operative.errors, status: :unprocessable_entity }
@@ -65,6 +68,7 @@ class OperativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def operative_params
+      #params.permit(:user_id, :name, :status, :skill, :job_id)
       params.require(:operative).permit(:user_id, :name, :status, :skill, :job_id)
     end
 end

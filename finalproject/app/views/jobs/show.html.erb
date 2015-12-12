@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @job.name %>
@@ -43,6 +41,7 @@
         <td><%= cur_operative.name %></td>
         <td><%= cur_operative.skill %></td>
         <td><%= cur_operative.xp %></td>
+        <td><%= link_to "Send Operative", {:controller => "operatives", :action => "update", :id => cur_operative.id, :job_id => @job.id}  %></td>
       <% end %>
     </tr> 
   <% end %> 
