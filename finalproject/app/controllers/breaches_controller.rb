@@ -7,6 +7,9 @@ class BreachesController < ApplicationController
   # GET /breaches.json
   def index
     @rand_user = User.all.sample
+    unless @rand_user.id != current_user.id
+      @rand_user = User.all.sample
+    end
     @breaches = Breach.where(user_id: current_user.id)
     enemy_failed_breaches = Breach.where(target_id: current_user.id)
     @enemy_list = Array.new
@@ -35,6 +38,10 @@ class BreachesController < ApplicationController
     @breach = Breach.new(breach_params)
     @breach.user_id = current_user.id
     @breach.target_id = User.find_by_name(breach_params[:target_id]).id
+
+    if @breach.target_id == current_user.id
+      redirect_to breaches_url, notice: "Nope." and return
+    end
     
     outcome = @breach.calculate_breach_outcome
     target = User.find(@breach.target_id)
