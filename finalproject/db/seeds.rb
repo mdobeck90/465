@@ -53,7 +53,7 @@ operatives = Operative.create(
     { user_id: 2, name: 'Daft Adder', status: 'idle', skill: 6, job_id: nil },
     { user_id: 2, name: 'Stale Hammer', status: 'idle', skill: 2, job_id: nil },
     { user_id: 2, name: 'Orange Rocket', status: 'idle', skill: 3, job_id: nil },
-    { user_id: 2, name: 'Steel Sun', status: 'deployed', skill: 4, job_id: t },
+    { user_id: 2, name: 'Steel Sun', status: 'deployed', skill: 4, job_id: nil },
 
     { user_id: 4, name: 'Yoga', status: 'deployed', skill: 1, job_id: nil },
     { user_id: 4, name: 'Cunning Turtle', status: 'deployed', skill: 1, job_id: nil },

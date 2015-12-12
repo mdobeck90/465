@@ -3,7 +3,19 @@
 <h3>Ruby version 2.2.1</h3>
 <h3>System dependencies</h3>
 <p> Bcrypt gem was utilized for the Session Controller.  It offeres the core functionality of devise while providing easy salting and hashing of passwords.  A simple has_secure_password in the model will take care of all encryption and verification.</p>
-<p>Database creation</p>
+<h3>Database creation</h3>
+<p>I started slow with a users table and added operatives that belonged_to a user.  I grew into a self joining Users table that essentailly joins through the Breaches table.  It was confusing at first but it worked out really well.  There's really no other way to store relationships between users.  Friend or foe if you want to have many-to-many user relationships they have to reference each other without being able to call the wrong item or value. </p>
+<p>I ended up with 4 total tables:
+-Jobs
+-Users
+-Operatives
+-Breaches
+All of them are used, not as I intended, but my eyes where bigger than my stomach during the planning phase.</p>
+
+<p>Additional tables to be added where:
+-Messages
+-Market
+The plan was to allow transactions of assets and text between users.  As well as an actual Market that would function like ebay where users could generate cash from extra items.</p>
 <h3>Abstract</h3>
 <p>This project was a simple test of 3 things
 -building the login/user session management
