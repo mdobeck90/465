@@ -1,6 +1,9 @@
 class OperativesController < ApplicationController
   before_action :set_operative, only: [:show, :edit, :update, :destroy]
 
+  def assign_job
+  end
+
   # GET /operatives
   # GET /operatives.json
   def index
@@ -20,6 +23,7 @@ class OperativesController < ApplicationController
 
   # GET /operatives/1/edit
   def edit
+    @operative.assign_job(params[:job_id]) 
   end
 
   # POST /operatives
@@ -40,7 +44,6 @@ class OperativesController < ApplicationController
   # PATCH/PUT /operatives/1.json
   def update
     @user = User.find(@operative.user_id) 
-    @operative.assign_job(params[:job_id]) 
     
     respond_to do |format|
       if @operative.update(operative_params)

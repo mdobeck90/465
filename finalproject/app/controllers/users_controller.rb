@@ -13,9 +13,11 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @operatives = current_user.operatives 
+      @operatives.each do |operative|
+        operative.check_job_status
+      end
     @new_operative = current_user.operatives.new
     @operative = current_user.operatives.new
-    #current_user.check_for_breaches
   end
 
   # GET /users/new

@@ -16,7 +16,7 @@
       <td><%= cur_operative.skill %></td>
 
       <% if cur_operative.status != "deployed" %>
-        <td>-</td>
+        <td><%= link_to "New Job",  edit_operative_path(cur_operative), :method => :get %></td>
       <% else %>
         <td><%= cur_operative.job_id %></td>
       <% end %>

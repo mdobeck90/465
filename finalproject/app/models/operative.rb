@@ -6,6 +6,15 @@ class Operative < ActiveRecord::Base
 
   def assign_job(assigned_job_id)
     self.update(job_id: assigned_job_id)
+    cur_job = Job.find(assigned_job_id)
+    self.update(return_time: Time.now + cur_job.time_to_complete)
+  end
+
+  def check_job_status
+    if self.return_time != nil && self.return_time >= Time.now
+      self.job_id = nil
+      self.return_time = nil
+    end
   end
 
   def check_deployment_time 
