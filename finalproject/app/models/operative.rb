@@ -46,4 +46,15 @@ class Operative < ActiveRecord::Base
     o_contract_update = current_user.o_contract - 1
     current_user.update(o_contract: o_contract_update)
   end
+
+  def starting_operative(user_id)
+    current_user = User.find(user_id)
+
+    f_name = operative_f_name.sample 
+    l_name = operative_l_name.sample 
+    name = f_name.capitalize + " " + l_name.capitalize
+    status = "idle"
+    new_operative = Operative.create(user_id: current_user.id, status: 'idle', name: name )
+  end
+
 end

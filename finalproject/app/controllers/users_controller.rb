@@ -33,12 +33,13 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    for i in 1..4
-      @new_operative = @user.operatives.new
-      @new_operative.generate_operative
-    end
+    
 
     if @user.save
+      for i in 1..4
+        @new_operative = @user.operatives.new
+        @new_operative.starting_operative(@user.id)
+      end
       #item_params = {:user_id => @user.id}
       #@item = Item.new(item_params)
       #@item.save
