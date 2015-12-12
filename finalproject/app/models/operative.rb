@@ -11,7 +11,11 @@ class Operative < ActiveRecord::Base
     new_honeypot = job_reward[:honeypot] + User.find(self.user_id).honeypot
     new_o_contract = job_reward[:o_contract] + User.find(self.user_id).o_contract
     new_zeroday = job_reward[:zeroday] + User.find(self.user_id).zeroday
-    new_cash = job_reward[:cash] + User.find(self.user_id).cash
+
+    User.find(self.user_id).update(firewall: new_firewall)
+    User.find(self.user_id).update(honeypot: new_honeypot)
+    User.find(self.user_id).update(o_contract: new_o_contract)
+    User.find(self.user_id).update(zeroday: new_zeroday)
   end
 
   def check_job_status

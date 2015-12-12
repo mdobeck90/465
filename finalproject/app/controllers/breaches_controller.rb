@@ -50,7 +50,7 @@ class BreachesController < ApplicationController
     if outcome[:honeytrap] == true && outcome[:repel] == true
       target.active_honeypot - 1
       @breach.breached = true
-      @breach.cash_stolen = User.find(@breach.target_id).cash * 0.2
+      @breach.cash_stolen = User.find(@breach.target_id).cash * 0.5
       @breach.z_stolen = 0
       @breach.honeypot_stolen = 0
       @breach.firewall_stolen = 0

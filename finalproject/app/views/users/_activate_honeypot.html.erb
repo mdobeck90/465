@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="hidden-field">
-    <%= f.hidden_field(:honeypot, :value => (current_user.honeypot - 1)) %>
+    <%= f.hidden_field(:honeypot, :value => (current_user.honeypot - 4)) %>
     <%= f.hidden_field(:active_honeypot, :value => (current_user.active_honeypot + 1)) %>
   </div> 
   <div class="actions">
-    <%= f.submit "Activate Honeypot(-1 Honeypot)" %>
+    <%= f.submit "Activate Honeypot(-4 Honeypot)" %>
   </div>
 <% end %>

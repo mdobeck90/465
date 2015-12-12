@@ -27,7 +27,9 @@ class OperativesController < ApplicationController
   # GET /operatives/1/edit
   def edit
     if rand(1..100) > 90  
-      @operative.destroy
+      if @operative.destroy
+        redirect_to user_url(@operative.user), notice: 'Ohh snap your operative screwed up and died.'
+      end
     else
       @operative.assign_job(rand(1..Job.last.id)) 
     end
@@ -54,7 +56,7 @@ class OperativesController < ApplicationController
     
     respond_to do |format|
       if @operative.update(operative_params)
-        format.html { redirect_to user_url(@user), notice: 'Operative was successfully updated.' }
+        format.html { redirect_to user_url(@user), notice: 'Operative was successfull.' }
         format.json { render :show, status: :ok, location: user_url(@user) }
       else
         format.html { render :edit }

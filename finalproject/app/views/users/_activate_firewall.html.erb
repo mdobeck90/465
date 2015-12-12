@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="hidden-field">
-    <%= f.hidden_field(:firewall, :value => (current_user.firewall - 1)) %>
+    <%= f.hidden_field(:firewall, :value => (current_user.firewall - 5)) %>
     <%= f.hidden_field(:active_firewall, :value => (current_user.active_firewall + 1)) %>
   </div> 
   <div class="actions">
-    <%= f.submit "Activate Firewall(-1 Firewall)" %>
+    <%= f.submit "Activate Firewall(-5 Firewall)" %>
   </div>
 <% end %>
