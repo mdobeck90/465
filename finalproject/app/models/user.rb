@@ -30,6 +30,8 @@ class User < ActiveRecord::Base
         breacher.update(cash: cash_earned)
 
         #flag this breach as paid out
+        update_zeroday = breacher.zeroday - 1
+        breacher.update(zeroday: update_zeroday)
         breach.update(reward_collected: true)
       end
     end
