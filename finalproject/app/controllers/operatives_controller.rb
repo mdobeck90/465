@@ -27,7 +27,7 @@ class OperativesController < ApplicationController
   def create
     @user = User.find params[:user_id]
     @operative = @user.operatives.new(operative_params)
-    @operative.generate_operative
+    @operative.generate_operative(params[:user_id])
 
     if @operative.save
       redirect_to user_url(@user), notice: 'Operative was successfully created.'
