@@ -4,7 +4,11 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Array.new
+    job_pool = Job.all
+    for i in 1..6
+      @jobs.push(job_pool.sample)
+    end
   end
 
   # GET /jobs/1

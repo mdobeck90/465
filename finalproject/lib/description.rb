@@ -1,6 +1,11 @@
 def descriptions
 [
-'After a mega-breach a company needs data retrieval experts.  Heavy resistance expected.',
+'Suspects in theft confirmed.  Locate and subdue.  Data integrity is priority one.',
+'VIP blackmail suspects located.  Seek/destroy approved.  No disintegrations.',
+'VIP blackmail suspects located. VIP has gave no constraints. Seek/destroy.',
+'VIP kidnapping in progress. --REDACTED-- has insurance on VIP, no negotiations.',
+'VIP kidnapping in progress. Seek/destroy after VIP extract.',
+'After a mega-breach a company needs data retrieval.  Heavy resistance expected.',
 'A recent swingvote by --REDACTED-- board of trustees approved a show of force as retaliaton for corp. espionage.  Prioritize infrastructure.',
 'CODE GREEN on wanted personell in Uptown Hong Kong. Wanted ALIVE',
 'CODE GREEN on wanted personell in Lower Tokyo. Wanted DEAD',
@@ -14,15 +19,16 @@ def descriptions
 'CODE GREEN on wanted personell in Seattle. Wanted ALIVE --BIOMATTER SENSITIVE--',
 'Deter future breaches via any means necessary.  Data retrieval secondary priority.',
 'Deter future breaches via any means necessary.  Personnel retrieval secondary priority.',
-'Deter future breaches via any means necessary.  Property retrieval secondary priority.',
+'Deter future breaches.  Property retrieval secondary priority.',
+'Deter future breaches on --REDACTED-- by destroying all stolen assets. Civilian casualties will reduce bonus.',
 'Deter future breaches via any means necessary.  No Restrictions.',
 'Aid LEO search for subject.',
 'Aid --REDACTED-- in search for market sale of Intellectual Property.',
 'Aid --REDACTED-- in recovery of data before estimated TTC.',
 'Aid Chinese LEO in recovery of data before estimated TTC.',
-'Aid US LEO in recovery of data before estimated TTC.',
-'Aid Canadian LEO in recovery of data before estimated TTC.',
+'Aid US LEO in recovery of personell before estimated border crossing.',
+'Aid Canadian LEO in recovery of assets.',
 'Aid Russian LEO in recovery of data before estimated TTC.',
-'Aid Japanese LEO in recovery of data before estimated TTC.'
+'Aid Japanese LEO in recovery of trafficking victims.'
 ]
 end

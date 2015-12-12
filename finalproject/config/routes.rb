@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :jobs
   root 'sessions#new'
 
   get 'signup' => 'users#new'
 
 
-  resources :breaches, :shallow => true
+  resources :jobs
+  resources :breaches
   resources :users do
     resources :operatives, :shallow => true
   end
