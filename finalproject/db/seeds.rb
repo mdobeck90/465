@@ -10,10 +10,18 @@ t = Time.now + rand(0..35)
 
 users = User.create(
   [
-    { name: 'alice', password: 'a', firewall: 5, honeypot: 2, zeroday: 5 },    
+    { name: 'alice', password: 'a', firewall: 5, honeypot: 2, zeroday: 5, o_contract: 1 },    
     { name: 'bob', password: 'b', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
-    { name: 'charlie', password: 'c' },    
-    { name: 'david', password: 'd' }    
+    { name: 'charlie', password: 'c', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3, o_contract: 1},    
+    { name: 'david', password: 'd', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3, o_contract: 1 },    
+    { name: 'elly', password: 'e', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'frank', password: 'f', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'garry', password: 'g', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3, o_contract: 1 },    
+    { name: 'hugh', password: 'h', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'isaac', password: 'i', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'jane', password: 'j', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'karrie', password: 'k', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
+    { name: 'lisa', password: 'l' }    
   ]
 )
 
