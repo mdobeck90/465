@@ -7,6 +7,7 @@
     <td>Skill</td>
     <td>XP to Skill Up</td>
     <td>Job</td>
+    <td>Return Time</td>
   </tr>
   <% @operatives.each  do |cur_operative|%>
     <tr>
@@ -15,6 +16,7 @@
       <td><%= cur_operative.status %></td>
       <td><%= cur_operative.skill %></td>
       <td><%= cur_operative.xp %></td>
+      <td><%= cur_operative.return_time.in_time_zone("PST") %></td>
 
       <% if cur_operative.status != "deployed" %>
         <td>-</td>

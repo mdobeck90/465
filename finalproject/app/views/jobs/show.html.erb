@@ -39,14 +39,14 @@
   </tr>
   <% @operatives.each  do |cur_operative|%>
     <tr>
-      <% if cur_operative.status == 'idle'  && !cur_operative.new_record? %>
+      <% if cur_operative.status == 'idle' && !cur_operative.new_record? %>
         <td><%= cur_operative.name %></td>
         <td><%= cur_operative.skill %></td>
         <td><%= cur_operative.xp %></td>
       <% end %>
     </tr> 
-    <% end %>
   <% end %> 
 </table>
+<br>
 
 <%= link_to 'Back', jobs_path %>

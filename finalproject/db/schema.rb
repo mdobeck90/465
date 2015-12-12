@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(version: 20151212002948) do
     t.integer  "skill"
     t.integer  "xp"
     t.integer  "job_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.time     "return_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

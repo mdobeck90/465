@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-t = Time.now + 3
+t = Time.now + rand(0..35)
 
 users = User.create(
   [
@@ -36,10 +36,11 @@ breaches = Breach.create(
 
 operatives = Operative.create(
   [
-    { user_id: 1, name: 'Smiling Gibbon', status: 'deployed', skill: 7, job_id: 1 },
+    { user_id: 1, name: 'Smiling Gibbon', status: 'deployed', skill: 7, job_id: nil, return_time: t },
     { user_id: 1, name: 'Sitting Tofu', status: 'injured', skill: 4, job_id: nil },
-    { user_id: 1, name: 'Fuze', status: 'injured', skill: 4, job_id: nil },
-    { user_id: 1, name: 'Black Swan', status: 'mia', skill: 3, job_id: nil },
+    { user_id: 1, name: 'Fuze', status: 'injured', skill: 4, job_id: nil, return_time: t },
+    { user_id: 1, name: 'Black Swan', status: 'mia', skill: 3, job_id: nil, return_time: t },
+    { user_id: 1, name: 'Golden Jackrabbit', status: 'idle', skill: 6, job_id: nil },
 
     { user_id: 2, name: 'Daft Adder', status: 'injured', skill: 6, job_id: nil },
     { user_id: 2, name: 'Stale Hammer', status: 'deployed', skill: 2, job_id: nil },

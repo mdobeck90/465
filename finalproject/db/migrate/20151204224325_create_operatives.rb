@@ -7,6 +7,7 @@ class CreateOperatives < ActiveRecord::Migration
       t.integer :skill
       t.integer :xp
       t.integer :job_id
+      t.time :return_time
 
       t.timestamps null: false
     end

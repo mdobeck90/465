@@ -1,0 +1,25 @@
+<%= form_for(@operatives) do |f| %>
+  <% if @operatives.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@operatives.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @operative.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field(:deployment_time, :value => nil) %><br>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:job_id, :value => nil) %><br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Start Job",  {:controller => "operative", :action => "create" , :method => :post} %>
+  </div>
+  
+<% end %>
