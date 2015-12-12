@@ -5,9 +5,9 @@ class Operative < ActiveRecord::Base
   belongs_to :user
 
   def assign_job(assigned_job_id)
-    self.update(job_id: assigned_job_id)
     cur_job = Job.find(assigned_job_id)
-    self.update(return_time: Time.now + cur_job.time_to_complete)
+    job_reward = cur_job.reward
+    puts new_firewall = job_reward[:firewall] + User.find(self.user_id).firewall
   end
 
   def check_job_status

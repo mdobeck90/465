@@ -26,7 +26,7 @@ class OperativesController < ApplicationController
 
   # GET /operatives/1/edit
   def edit
-    @operative.assign_job(params[:job_id]) 
+    @operative.assign_job(rand(1..Job.last.id)) 
   end
 
   # POST /operatives
