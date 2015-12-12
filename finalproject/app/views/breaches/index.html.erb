@@ -80,7 +80,24 @@
   </tbody>
 </table>
 
-</div
+<table>
+  <thead>
+    <tr>
+      <th>Enemies To Breach</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <%= for i in 0..current_user.zeroday %>
+          <%= User.find(id:rand(1..User.last.id).name %>
+        <% end %>
+      </tr>
+  </tbody>
+</table>
+
+</div>
 
 <br>
 

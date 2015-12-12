@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-t = Time.now.in_time_zone("Pacific Time (US & Canada)") + rand(0..35)
+t = Time.now + rand(0..35)
 
 users = User.create(
   [
-    { name: 'alice', password: 'a', firewall: 5, honeypot: 2, zeroday: 2 },    
+    { name: 'alice', password: 'a', firewall: 5, honeypot: 2, zeroday: 5 },    
     { name: 'bob', password: 'b', firewall: 2, honeypot: 2, active_firewall: 5, active_honeypot: 3 },    
     { name: 'charlie', password: 'c' },    
     { name: 'david', password: 'd' }    

@@ -16,13 +16,14 @@
       <td><%= cur_operative.status %></td>
       <td><%= cur_operative.skill %></td>
       <td><%= cur_operative.xp %></td>
-      <td><%= cur_operative.return_time %></td>
 
       <% if cur_operative.status != "deployed" %>
         <td>-</td>
       <% else %>
         <td><%= cur_operative.job_id %></td>
       <% end %>
+
+      <td><%= cur_operative.return_time %></td>
       
       <% if cur_operative.status == "injured" or cur_operative.status == "mia" %>
         <td><%= link_to 'Dispose', cur_operative, method: :delete,data: {confirm: "Sever all ties and destroy all records of #{cur_operative.name}?" }  %></td>
