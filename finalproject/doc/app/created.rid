@@ -1,0 +1,24 @@
+Sat, 12 Dec 2015 10:26:08 -0800
+README.rdoc	Wed, 02 Dec 2015 22:28:34 -0800
+app/controllers/application_controller.rb	Wed, 09 Dec 2015 12:23:18 -0800
+app/controllers/breaches_controller.rb	Sat, 12 Dec 2015 03:35:54 -0800
+app/controllers/jobs_controller.rb	Fri, 11 Dec 2015 23:03:25 -0800
+app/controllers/operatives_controller.rb	Sat, 12 Dec 2015 03:33:21 -0800
+app/controllers/sessions_controller.rb	Sat, 05 Dec 2015 18:07:19 -0800
+app/controllers/users_controller.rb	Sat, 12 Dec 2015 10:12:54 -0800
+app/helpers/application_helper.rb	Wed, 02 Dec 2015 22:28:34 -0800
+app/helpers/breaches_helper.rb	Thu, 03 Dec 2015 18:48:33 -0800
+app/helpers/jobs_helper.rb	Fri, 11 Dec 2015 16:29:49 -0800
+app/helpers/operatives_helper.rb	Fri, 04 Dec 2015 21:38:44 -0800
+app/helpers/sessions_helper.rb	Sat, 05 Dec 2015 18:07:28 -0800
+app/helpers/users_helper.rb	Wed, 09 Dec 2015 12:48:56 -0800
+app/models/breach.rb	Fri, 11 Dec 2015 21:11:16 -0800
+app/models/job.rb	Sat, 12 Dec 2015 03:29:02 -0800
+app/models/operative.rb	Sat, 12 Dec 2015 10:19:44 -0800
+app/models/user.rb	Fri, 11 Dec 2015 21:31:45 -0800
+lib/description.rb	Fri, 11 Dec 2015 22:33:02 -0800
+lib/generate_jobs.rb	Fri, 11 Dec 2015 20:53:47 -0800
+lib/items.rb	Fri, 11 Dec 2015 20:52:07 -0800
+lib/job_names.rb	Fri, 11 Dec 2015 20:01:08 -0800
+lib/operative_f_name.rb	Mon, 07 Dec 2015 17:32:10 -0800
+lib/operative_l_name.rb	Mon, 07 Dec 2015 17:11:14 -0800
