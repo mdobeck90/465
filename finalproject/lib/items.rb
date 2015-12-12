@@ -1,9 +1,16 @@
 def items
 [
 'none',
+'firewall',
 'zero_day',
 'none',
 'firewall',
+'firewall',
+'firewall',
+'firewall',
+'firewall',
+'none',
+'none',
 'none',
 'honeypot',
 'none',
