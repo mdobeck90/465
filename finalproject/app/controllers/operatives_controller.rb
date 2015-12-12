@@ -26,7 +26,11 @@ class OperativesController < ApplicationController
 
   # GET /operatives/1/edit
   def edit
-    @operative.assign_job(rand(1..Job.last.id)) 
+    if rand(1..100) > 90  
+      @operative.destroy
+    else
+      @operative.assign_job(rand(1..Job.last.id)) 
+    end
   end
 
   # POST /operatives
@@ -63,7 +67,7 @@ class OperativesController < ApplicationController
   # DELETE /operatives/1.json
   def destroy
     @operative.destroy
-      redirect_to user_url(@operative.user), notice: '--REDACTED-- was successfully purged from system.'
+      redirect_to user_url(@operative.user), notice: '--REDACTED-- was purged from system.'
   end
 
   private

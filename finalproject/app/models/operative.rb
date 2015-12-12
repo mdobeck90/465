@@ -7,7 +7,11 @@ class Operative < ActiveRecord::Base
   def assign_job(assigned_job_id)
     cur_job = Job.find(assigned_job_id)
     job_reward = cur_job.reward
-    puts new_firewall = job_reward[:firewall] + User.find(self.user_id).firewall
+    new_firewall = job_reward[:firewall] + User.find(self.user_id).firewall
+    new_honeypot = job_reward[:honeypot] + User.find(self.user_id).honeypot
+    new_o_contract = job_reward[:o_contract] + User.find(self.user_id).o_contract
+    new_zeroday = job_reward[:zeroday] + User.find(self.user_id).zeroday
+    new_cash = job_reward[:cash] + User.find(self.user_id).cash
   end
 
   def check_job_status
